@@ -1,1 +1,17 @@
 @import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-primary-light: #f8f9fa;
+    --color-primary-dark: #0b090a;
+
+    --color-secondary-light: #EBEBEB;
+    --color-secondary-dark: #070606;
+
+    --color-surface-light: #212529;
+    --color-surface-dark: #e9ecef;
+
+    --font-sans: 'Inter', 'Inter Fallback';
+    --font-mono: 'JetBrains Mono', 'JetBrains Mono Fallback';
+}
