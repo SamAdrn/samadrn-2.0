@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Roboto_Mono, JetBrains_Mono } from 'next/font/google';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 import Navbar from './components/navbar';
 import SplashScreen from './components/spash-screen';
 
@@ -8,12 +8,6 @@ const inter = Inter({
     subsets: ['latin'],
     display: 'swap',
     variable: '--font-inter',
-});
-
-const robotoMono = Roboto_Mono({
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-roboto-mono',
 });
 
 const jetBrainsMono = JetBrains_Mono({
@@ -36,7 +30,7 @@ export default function RootLayout({
         <html lang="en">
             <body
                 className={
-                    `${jetBrainsMono.variable} font-mono antialiased transition-colors ` +
+                    `${jetBrainsMono.variable} ${inter.variable} antialiased transition-colors ` +
                     'bg-primary-light text-surface-light dark:bg-primary-dark dark:text-surface-dark'
                 }
             >

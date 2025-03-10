@@ -37,7 +37,7 @@ export default function Navbar() {
         <nav className="sticky top-0 z-50 flex justify-between items-center py-5 px-10">
             <div className="flex items-center justify-between">
                 <Link href="#" className="text-3xl font-semibold font-mono">
-                    Samuel Kosasih
+                    SAMUEL KOSASIH
                 </Link>
             </div>
 
