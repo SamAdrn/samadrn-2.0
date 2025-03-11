@@ -1,7 +1,3 @@
 export default function Hero() {
-    return (
-        <div>
-            SAMUEL KOSASIH
-        </div>
-    );
+    return <div></div>;
 }
