@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 
 import './globals.css';
+import AmberGlowBackground from './backgrounds/amber-glow-background';
 import Navbar from './components/navbar';
 import SplashScreen from './components/spash-screen';
 
@@ -35,33 +36,16 @@ export default function RootLayout({
                     ' text-surface-light  dark:text-surface-dark'
                 }
             >
-                <SplashScreen>
-                    <div className="relative min-h-screen transition-colors bg-primary-light dark:bg-primary-dark overflow-hidden">
-                        <Navbar />
-                        {children}
+                <SplashScreen />
 
-                        {/* Decorative Pieces */}
-                        <div
-                            className={
-                                'absolute top-0 right-0 w-2/3 h-2/3 bg-gradient-to-bl rounded-full blur-3xl ' +
-                                'from-orange-400/50 via-red-200/50 to-primary-light ' +
-                                'dark:from-orange-700/15 dark:via-red-800/10 dark:to-primary-dark'
-                            }
-                        ></div>
-                        <div
-                            className={
-                                'absolute bottom-0 left-0 w-1/2 h-1/2 rounded-full blur-3xl -translate-x-1/4 translate-y-1/4 ' +
-                                'bg-yellow-200/20 dark:bg-yellow-900/20'
-                            }
-                        ></div>
-                        <div
-                            className={
-                                'absolute top-1/2 left-1/2 w-1/3 h-1/3 rounded-full blur-3xl ' +
-                                'bg-red-100/30 dark:bg-red-800/5 dark:opacity-70'
-                            }
-                        ></div>
-                    </div>
-                </SplashScreen>
+                {/* Main Content */}
+                <div className="relative min-h-screen">
+                    <Navbar />
+
+                    <div className="mx-20">{children}</div>
+                </div>
+
+                <AmberGlowBackground />
             </body>
         </html>
     );

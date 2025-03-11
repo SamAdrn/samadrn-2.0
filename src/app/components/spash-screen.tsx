@@ -3,12 +3,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-interface SplashScreenProps {
-    children: React.ReactNode;
-}
-
 /** Splash screen component. Provides an entry animation for the website. */
-export default function SplashScreen({ children }: SplashScreenProps) {
+export default function SplashScreen() {
     /** Text to eventually display in the splash screen */
     const finalText = 'HELLO WORLD';
 
@@ -22,6 +18,10 @@ export default function SplashScreen({ children }: SplashScreenProps) {
     const [showText, setShowText] = useState(true);
 
     useEffect(() => {
+        // Prevent scrolling when splash screen is active
+        document.body.style.overflow = 'hidden';
+
+        // Keep track of index of typed text
         let currentIndex = 0;
 
         // Typing animation
@@ -39,6 +39,7 @@ export default function SplashScreen({ children }: SplashScreenProps) {
                     // After text hides, hide the entire splash screen
                     setTimeout(() => {
                         setShowSplash(false);
+                        document.body.style.overflow = 'auto';
                     }, 600); // Delay after text hiding
                 }, 1000);
             }
@@ -48,53 +49,48 @@ export default function SplashScreen({ children }: SplashScreenProps) {
     }, []);
 
     return (
-        <div className="min-h-screen w-full">
-            {/* Splash Screen */}
-            <AnimatePresence>
-                {showSplash && (
-                    <motion.div
-                        className={
-                            'fixed inset-0 flex items-center justify-center z-100 ' +
-                            'bg-primary-light dark:bg-primary-dark text-surface-light dark:text-surface-dark '
-                        }
-                        initial={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.8, ease: 'easeInOut' }}
-                    >
-                        {/* Text Container */}
-                        <div className="overflow-hidden">
-                            <AnimatePresence>
-                                {showText && (
-                                    <motion.h1
-                                        className="text-4xl md:text-6xl font-mono font-bold flex items-center"
-                                        initial={{ y: 0 }}
-                                        exit={{ y: 100 }}
+        <AnimatePresence>
+            {showSplash && (
+                <motion.div
+                    id="splash-screen"
+                    className={
+                        'fixed inset-0 flex items-center justify-center z-100 ' +
+                        'bg-primary-light dark:bg-primary-dark text-surface-light dark:text-surface-dark '
+                    }
+                    initial={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8, ease: 'easeInOut' }}
+                >
+                    {/* Text Container */}
+                    <div className="overflow-hidden">
+                        <AnimatePresence>
+                            {showText && (
+                                <motion.h1
+                                    className="text-4xl md:text-6xl font-mono font-bold flex items-center"
+                                    initial={{ y: 0 }}
+                                    exit={{ y: 100 }}
+                                    transition={{
+                                        duration: 0.5,
+                                        ease: 'easeInOut',
+                                    }}
+                                >
+                                    {displayText}
+                                    <motion.span // Text Cursor
+                                        className="inline-block ml-1 w-5 h-8 md:w-2 md:h-15 bg-surface-light dark:bg-surface-dark"
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: [1, 0, 1] }}
                                         transition={{
-                                            duration: 0.5,
+                                            duration: 1.2,
+                                            repeat: Infinity,
                                             ease: 'easeInOut',
                                         }}
-                                    >
-                                        {displayText}
-                                        <motion.span // Text Cursor
-                                            className="inline-block ml-1 w-5 h-8 md:w-2 md:h-15 bg-surface-light dark:bg-surface-dark"
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: [1, 0, 1] }}
-                                            transition={{
-                                                duration: 1.2,
-                                                repeat: Infinity,
-                                                ease: 'easeInOut',
-                                            }}
-                                        ></motion.span>
-                                    </motion.h1>
-                                )}
-                            </AnimatePresence>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-
-            {/* Main Content */}
-            <div>{children}</div>
-        </div>
+                                    ></motion.span>
+                                </motion.h1>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                </motion.div>
+            )}
+        </AnimatePresence>
     );
 }
