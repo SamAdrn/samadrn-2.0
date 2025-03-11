@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
+/** A button toggle to switch between light and dark mode */
 export default function ThemeSwitcher() {
     /** Keeps track of the dark mode preference */
     const [darkMode, setDarkMode] = useState(false);

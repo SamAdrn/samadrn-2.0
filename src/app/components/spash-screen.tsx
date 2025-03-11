@@ -3,12 +3,12 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-/** Splash screen component. Provides an entry animation for the website. */
-export default function SplashScreen({
-    children,
-}: {
+interface SplashScreenProps {
     children: React.ReactNode;
-}) {
+}
+
+/** Splash screen component. Provides an entry animation for the website. */
+export default function SplashScreen({ children }: SplashScreenProps) {
     /** Text to eventually display in the splash screen */
     const finalText = 'HELLO WORLD';
 
