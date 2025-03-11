@@ -1,3 +1,9 @@
+import Subheader from '../components/subheader';
+
 export default function Hero() {
-    return <div>Hello World</div>;
+    return (
+        <div>
+            <Subheader text={'About'} />
+        </div>
+    );
 }
