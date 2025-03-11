@@ -1,7 +1,9 @@
-export default function Home() {
+import Hero from './sections/hero';
+
+export default function Page() {
     return (
-        <div className="flex flex-col items-center justify-center h-screen">
-            <h1>Hello World</h1>
+        <div className="flex flex-col items-center justify-center">
+            <Hero />
         </div>
     );
 }

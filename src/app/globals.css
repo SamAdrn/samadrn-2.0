@@ -4,10 +4,13 @@
 
 @theme {
     --color-primary-light: #f8f9fa;
-    --color-primary-dark: #000814;
+    --color-primary-dark: #131515;
 
     --color-surface-light: #212529;
     --color-surface-dark: #e9ecef;
+
+    --color-sun-yellow: #f79824;
+    --color-moon-blue: #00b4d8;
 
     --font-sans: 'Inter', 'Inter Fallback';
     --font-mono: 'JetBrains Mono', 'JetBrains Mono Fallback';
