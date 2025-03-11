@@ -45,13 +45,13 @@ export default function RootLayout({
                             className={
                                 'absolute top-0 right-0 w-2/3 h-2/3 bg-gradient-to-bl rounded-full blur-3xl ' +
                                 'from-orange-400/50 via-red-200/50 to-primary-light ' +
-                                'dark:from-orange-700/10 dark:via-red-800/5 dark:to-primary-dark'
+                                'dark:from-orange-700/15 dark:via-red-800/10 dark:to-primary-dark'
                             }
                         ></div>
                         <div
                             className={
                                 'absolute bottom-0 left-0 w-1/2 h-1/2 rounded-full blur-3xl -translate-x-1/4 translate-y-1/4 ' +
-                                'bg-yellow-200/20 dark:bg-yellow-900/10'
+                                'bg-yellow-200/20 dark:bg-yellow-900/20'
                             }
                         ></div>
                         <div
