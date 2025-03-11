@@ -38,11 +38,14 @@ export default function ThemeSwitcher() {
             onClick={toggleDarkMode}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
-            className="relative cursor-pointer transition-colors duration-300 p-2 rounded-full border-2 border-surface-light dark:border-surface-dark hover:bg-primary-dark hover:dark:bg-primary-light"
+            className={
+                'relative cursor-pointer transition-colors duration-300 p-2 rounded-full border-2 ' +
+                'border-surface-light dark:border-surface-dark hover:bg-primary-dark hover:dark:bg-primary-light'
+            }
             aria-label={darkMode ? 'Toggle light mode' : 'Toggle dark mode'}
         >
             {/* Width and height of the container div should match the width and height of the svg */}
-            <div className="relative w-6 h-6">
+            <div className="relative w-3.5 h-3.5 md:w-6 md:h-6">
                 <AnimatePresence mode="wait" initial={false}>
                     {darkMode ? (
                         <motion.svg
@@ -55,7 +58,7 @@ export default function ThemeSwitcher() {
                                 ease: 'easeInOut',
                             }}
                             className={
-                                'absolute inset-0 w-6 h-6 ' +
+                                'absolute inset-0 w-3.5 h-3.5 md:w-6 md:h-6 transition-colors ' +
                                 (isHovered
                                     ? 'text-sun-yellow'
                                     : 'text-surface-dark')
@@ -82,7 +85,7 @@ export default function ThemeSwitcher() {
                                 ease: 'easeInOut',
                             }}
                             className={
-                                'absolute inset-0 w-6 h-6 transition-colors ' +
+                                'absolute inset-0 w-3.5 h-3.5 md:w-6 md:h-6 transition-colors ' +
                                 (isHovered
                                     ? 'text-moon-blue'
                                     : 'text-surface-light')
