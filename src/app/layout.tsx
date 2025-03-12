@@ -32,17 +32,17 @@ export default function RootLayout({
         <html lang="en">
             <body
                 className={
-                    `${jetBrainsMono.variable} ${inter.variable} antialiased transition-colors ` +
+                    `${jetBrainsMono.variable} ${inter.variable} font-sans antialiased transition-colors ` +
                     ' text-surface-light  dark:text-surface-dark'
                 }
             >
-                <SplashScreen />
+                {/* <SplashScreen /> */}
 
                 {/* Main Content */}
-                <div className="relative min-h-screen">
+                <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30 xl:mx-40">
                     <Navbar />
 
-                    <div className="mx-20">{children}</div>
+                    {children}
                 </div>
 
                 <AmberGlowBackground />

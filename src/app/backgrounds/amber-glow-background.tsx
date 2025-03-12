@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 /** Background component with warm amber glowing gradients */
@@ -9,9 +7,9 @@ const AmberGlowBackground = () => {
             {/* Top right orange-red glow */}
             <div
                 className={
-                    'absolute top-0 right-0 w-2/3 h-2/3 bg-gradient-to-bl rounded-full blur-3xl  transition-colors ' +
+                    'absolute top-0 right-0 w-2/3 h-2/3 bg-gradient-to-bl rounded-full blur-3xl transition-colors ' +
                     'from-orange-400/50 via-red-200/50 to-primary-light ' +
-                    'dark:from-orange-600/15 dark:via-red-700/10 dark:to-primary-dark'
+                    'dark:from-orange-600/15 dark:via-red-700/10 dark:to-primary-dark dark:opacity-70'
                 }
             ></div>
 
@@ -26,8 +24,9 @@ const AmberGlowBackground = () => {
             {/* Bottom left yellow glow */}
             <div
                 className={
-                    'absolute bottom-0 left-0 w-1/2 h-1/2 rounded-full blur-3xl -translate-x-1/4 translate-y-1/4 transition-colors ' +
-                    'bg-yellow-200/20 dark:bg-yellow-900/20'
+                    'absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr rounded-full blur-3xl -translate-x-1/4 translate-y-1/4 transition-all ' +
+                    'from-yellow-200/50 to-primary-light ' +
+                    'dark:bg-yellow-400 dark:opacity-90 dark:mix-blend-color'
                 }
             ></div>
         </div>
