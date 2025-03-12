@@ -14,6 +14,7 @@
 
     --font-sans: 'Inter', 'Inter Fallback';
     --font-mono: 'JetBrains Mono', 'JetBrains Mono Fallback';
+    --font-title: 'Poppins', 'Poppins Fallback';
 }
 
 :root {

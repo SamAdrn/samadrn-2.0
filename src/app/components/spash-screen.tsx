@@ -66,7 +66,7 @@ export default function SplashScreen() {
                         <AnimatePresence>
                             {showText && (
                                 <motion.h1
-                                    className="text-4xl md:text-6xl font-mono font-bold flex items-center"
+                                    className="text-4xl md:text-6xl font-mono font-bold flex items-center uppercase"
                                     initial={{ y: 0 }}
                                     exit={{ y: 100 }}
                                     transition={{
