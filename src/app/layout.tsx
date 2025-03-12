@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 
 import './globals.css';
-import AmberGlowBackground from './backgrounds/amber-glow-background';
+import AuroraGlowBackground from './backgrounds/aurora-glow-background';
 import Navbar from './components/navbar';
 import SplashScreen from './components/spash-screen';
 
@@ -39,13 +39,13 @@ export default function RootLayout({
                 {/* <SplashScreen /> */}
 
                 {/* Main Content */}
-                <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30 xl:mx-40">
+                <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30">
                     <Navbar />
 
                     {children}
                 </div>
 
-                <AmberGlowBackground />
+                <AuroraGlowBackground />
             </body>
         </html>
     );
