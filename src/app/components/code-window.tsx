@@ -5,8 +5,7 @@ export default function CodeWindow() {
             {/* Outer Glass Pane */}
             <div
                 className={
-                    'bg-gradient-to-br p-1 rounded-2xl backdrop-blur-sm border border-slate-700 transition-colors ' +
-                    'from-amber-400/10 to-yellow-500/10 dark:from-emerald-500/10 dark:to-blue-600/10'
+                    'bg-gray-500/20 p-1 rounded-2xl border border-slate-700/20 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 backdrop-saturate-100 backdrop-contrast-100'
                 }
             >
                 {/* Window */}

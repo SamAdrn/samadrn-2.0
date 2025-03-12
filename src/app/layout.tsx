@@ -1,5 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter, JetBrains_Mono, Poppins } from 'next/font/google';
+import {
+    Inter,
+    JetBrains_Mono,
+    Poppins,
+    Raleway,
+    Rubik,
+} from 'next/font/google';
 
 import './globals.css';
 import AuroraGlowBackground from './backgrounds/aurora-glow-background';
@@ -18,11 +24,10 @@ const jetBrainsMono = JetBrains_Mono({
     variable: '--font-jetbrains-mono',
 });
 
-const poppins = Poppins({
+const rubik = Rubik({
     subsets: ['latin'],
     display: 'swap',
-    variable: '--font-poppins',
-    weight: '400'
+    variable: '--font-rubik',
 });
 
 export const metadata: Metadata = {
@@ -39,11 +44,11 @@ export default function RootLayout({
         <html lang="en">
             <body
                 className={
-                    `${jetBrainsMono.variable} ${poppins.variable} ${inter.variable} font-sans antialiased transition-colors ` +
+                    `${jetBrainsMono.variable} ${rubik.variable} ${inter.variable} font-sans antialiased transition-colors ` +
                     ' text-surface-light  dark:text-surface-dark'
                 }
             >
-                <SplashScreen />
+                {/* <SplashScreen /> */}
 
                 {/* Main Content */}
                 <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30">
