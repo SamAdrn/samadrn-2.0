@@ -4,13 +4,13 @@ import LinkButton from '../components/link-button';
 /** The Hero Section Component. Should appear at the top of the page. */
 export default function Hero() {
     return (
-        <div className="w-full h-screen lg:grid lg:grid-cols-10 lg:gap-x-7">
+        <div className="w-full h-screen lg:grid lg:grid-cols-20 lg:gap-x-7">
             {/* Left Grid */}
-            <div className="h-4/5 lg:h-full lg:col-span-6 flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-5">
+            <div className="h-4/5 lg:h-full lg:col-span-11 flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-5">
                 {/* Name */}
                 <span
                     className={
-                        'mt-5 text-6xl xl:text-7xl font-title font-semibold tracking-tight drop-shadow-md ' +
+                        'mt-5 text-6xl xl:text-7xl font-title font-semibold leading-18 tracking-tight drop-shadow-md ' +
                         'underline decoration-[0.5rem] underline-offset-8 decoration-amber-600/50 dark:decoration-sky-600/50'
                     }
                 >
@@ -33,7 +33,7 @@ export default function Hero() {
             </div>
 
             {/* Right Grid */}
-            <div className="flex flex-col justify-center w-full lg:col-span-4">
+            <div className="flex flex-col justify-center w-full lg:col-span-9">
                 <CodeWindow />
             </div>
         </div>
