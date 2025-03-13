@@ -26,7 +26,7 @@ export default function AuroraGlowBackground() {
                 className={
                     'absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr rounded-full blur-3xl -translate-x-1/4 transition-colors ' +
                     'from-yellow-300/80 via-60% to-primary-light ' +
-                    'dark:from-purple-600/20 via-indigo-700/10 dark:to-primary-dark '
+                    'dark:from-green-800/30 via-teal-800/20 dark:to-primary-dark '
                 }
             ></div>
         </div>

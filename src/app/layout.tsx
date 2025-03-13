@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import {
     Inter,
     JetBrains_Mono,
+    Montserrat,
     Poppins,
+    Quicksand,
     Raleway,
     Rubik,
 } from 'next/font/google';
@@ -24,10 +26,10 @@ const jetBrainsMono = JetBrains_Mono({
     variable: '--font-jetbrains-mono',
 });
 
-const rubik = Rubik({
+const montserrat = Montserrat({
     subsets: ['latin'],
     display: 'swap',
-    variable: '--font-rubik',
+    variable: '--font-montserrat',
 });
 
 export const metadata: Metadata = {
@@ -44,7 +46,7 @@ export default function RootLayout({
         <html lang="en">
             <body
                 className={
-                    `${jetBrainsMono.variable} ${rubik.variable} ${inter.variable} font-sans antialiased transition-colors ` +
+                    `${jetBrainsMono.variable} ${montserrat.variable} ${inter.variable} text-lg font-sans antialiased transition-colors ` +
                     'text-surface-light  dark:text-surface-dark'
                 }
             >

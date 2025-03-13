@@ -1,29 +1,39 @@
 import CodeWindow from '../components/code-window';
-import Subheader from '../components/subheader';
+import LinkButton from '../components/link-button';
 
 /** The Hero Section Component. Should appear at the top of the page. */
 export default function Hero() {
     return (
-        <div className="w-full lg:h-[calc(100vh-var(--navbar-height))] lg:grid lg:grid-cols-9 lg:gap-x-10">
-            <div className="h-[calc(100vh-var(--navbar-height)-5rem)] pt-10 lg:h-full lg:col-span-5 lg:pt-[15%]">
-                <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-8">
-                    {/* Name */}
-                    <span
-                        className={
-                            'mt-5 text-7xl lg:text-8xl font-title font-medium tracking-tighter drop-shadow-md ' +
-                            'underline decoration-[0.5rem] underline-offset-8 decoration-amber-600/50 dark:decoration-purple-400/50'
-                        }
-                    >
-                        Samuel Kosasih
+        <div className="w-full h-screen lg:grid lg:grid-cols-10 lg:gap-x-10">
+            {/* Left Grid */}
+            <div className="h-4/5 lg:h-full lg:col-span-6 flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-5">
+                {/* Name */}
+                <span
+                    className={
+                        'mt-5 text-7xl xl:text-7.5xl font-title font-semibold tracking-tight drop-shadow-md ' +
+                        'underline decoration-[0.5rem] underline-offset-8 decoration-amber-600/50 dark:decoration-sky-600/50'
+                    }
+                >
+                    Samuel Kosasih
+                </span>
+
+                {/* Subtitle */}
+                <span className="mt-2 mx-10 md:mx-0 text-xl md:text-2xl font-semibold tracking-tight">
+                    Building efficient software solutions with clean code.
+                </span>
+
+                <div>
+                    {/*  Languages I am comfortable with: */}
+                    <span className="me-2 text-surface-half-light dark:text-surface-half-dark">
+                        Mastering Front-End. Exploring Back-End.
                     </span>
 
-                    {/* Subtitle */}
-                    <span className="mx-10 md:mx-0 text-xl md:text-2xl font-semibold tracking-tight">
-                        Building efficient software solutions with clean code.
-                    </span>
+                    <LinkButton text="View my Resume" />
                 </div>
             </div>
-            <div className="flex justify-center w-full lg:h-full lg:col-span-4 lg:pt-[20%]">
+
+            {/* Right Grid */}
+            <div className="flex flex-col justify-center w-full lg:col-span-4">
                 <CodeWindow />
             </div>
         </div>
