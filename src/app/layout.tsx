@@ -45,15 +45,15 @@ export default function RootLayout({
             <body
                 className={
                     `${jetBrainsMono.variable} ${rubik.variable} ${inter.variable} font-sans antialiased transition-colors ` +
-                    ' text-surface-light  dark:text-surface-dark'
+                    'text-surface-light  dark:text-surface-dark'
                 }
             >
                 {/* <SplashScreen /> */}
 
+                <Navbar />
+
                 {/* Main Content */}
                 <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30">
-                    <Navbar />
-
                     {children}
                 </div>
 
