@@ -155,15 +155,3 @@ function TypeScriptCode() {
         </code>
     );
 }
-
-type Passion = 'Coding' | 'Problem Solving';
-
-class Samuel {
-    name: string = 'Samuel Kosasih';
-
-    get currentCompany(): string {
-        return 'Inovalon';
-    }
-
-    toString = (): string => `$: Software Engineer`;
-}
