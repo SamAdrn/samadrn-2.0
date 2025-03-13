@@ -1,18 +1,11 @@
 import type { Metadata } from 'next';
-import {
-    Inter,
-    JetBrains_Mono,
-    Montserrat,
-    Poppins,
-    Quicksand,
-    Raleway,
-    Rubik,
-} from 'next/font/google';
+import { Inter, JetBrains_Mono, Montserrat } from 'next/font/google';
 
 import './globals.css';
 import AuroraGlowBackground from './backgrounds/aurora-glow-background';
 import Navbar from './components/navbar';
 import SplashScreen from './components/spash-screen';
+import CustomCursor from './components/custom-cursor';
 
 const inter = Inter({
     subsets: ['latin'],
@@ -59,6 +52,7 @@ export default function RootLayout({
                     {children}
                 </div>
 
+                {/* <CustomCursor /> */}
                 <AuroraGlowBackground />
             </body>
         </html>
