@@ -1,5 +1,6 @@
 import CodeWindow from '../components/code-window';
 import LinkButton from '../components/link-button';
+import SocialBar from '../components/social-bar';
 
 /** The Hero Section Component. Should appear at the top of the page. */
 export default function Hero() {
@@ -22,14 +23,19 @@ export default function Hero() {
                     Building efficient software solutions with clean code.
                 </span>
 
-                <div className='mx-10 md:mx-0'>
+                <div className="mx-10 md:mx-0">
                     {/*  Languages I am comfortable with: */}
                     <span className="me-2 text-surface-half-light dark:text-surface-half-dark">
-                        Mastering Front-End. <span className='hidden md:inline'>Exploring Back-End.</span>
+                        Mastering Front-End.{' '}
+                        <span className="hidden md:inline">
+                            Exploring Back-End.
+                        </span>
                     </span>
 
                     <LinkButton text="View my Resume" />
                 </div>
+
+                <SocialBar />
             </div>
 
             {/* Right Grid */}
