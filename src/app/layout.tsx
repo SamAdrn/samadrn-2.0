@@ -44,7 +44,6 @@ export default function RootLayout({
                 }
             >
                 {/* <SplashScreen /> */}
-
                 <Navbar />
 
                 {/* Main Content */}
