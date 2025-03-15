@@ -28,14 +28,14 @@ export default function Navbar() {
         <header>
             <nav
                 className={
-                    'fixed bg-transparent top-0 left-0 right-0 z-50 px-5 md:px-20 lg:px-30 flex justify-between items-center h-[var(--navbar-height)] transition-all duration-300 ' +
+                    'fixed bg-transparent top-0 left-0 right-0 z-50 px-5 md:px-20 lg:px-[5%] flex justify-between items-center h-[var(--navbar-height)] transition-all duration-300 ' +
                     (isScrolled
                         ? 'backdrop-blur-sm bg-white/10 dark:bg-gray-900/10 shadow-xs'
                         : 'bg-transparent')
                 }
             >
                 <div className="flex items-center justify-between">
-                    <Link href="#" className="text-3xl font-semibold font-mono">
+                    <Link href="#" className="text-2xl font-semibold font-mono">
                         SAMUEL KOSASIH
                     </Link>
                 </div>

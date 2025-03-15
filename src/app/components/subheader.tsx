@@ -5,8 +5,13 @@ interface SubheaderProps {
 /** A bordered pill-shaped container for subheader text */
 export default function Subheader({ text }: SubheaderProps) {
     return (
-        <div className="select-none border-1 rounded-md font-mono font-bold text-xl px-4 py-1">
+        <span
+            className={
+                'select-none font-bold text-2xl px-4 py-1 ' +
+                'underline decoration-[0.3rem] underline-offset-8 decoration-amber-600/50 dark:decoration-sky-600/50'
+            }
+        >
             {text.toUpperCase()}
-        </div>
+        </span>
     );
 }

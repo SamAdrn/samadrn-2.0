@@ -20,7 +20,7 @@ export function SplashAnimationProvider({
 }: {
     children: React.ReactNode;
 }) {
-    const [splashComplete, setSplashComplete] = useState(false);
+    const [splashComplete, setSplashComplete] = useState(true);
 
     return (
         <SplashAnimationContext.Provider

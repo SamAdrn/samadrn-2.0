@@ -45,12 +45,12 @@ export default function RootLayout({
                 }
             >
                 <SplashAnimationProvider>
-                    <SplashScreen />
+                    {/* <SplashScreen /> */}
 
                     <Navbar />
 
                     {/* Main Content */}
-                    <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30">
+                    <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-[10%]">
                         {children}
                     </div>
 
