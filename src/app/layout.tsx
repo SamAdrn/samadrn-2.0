@@ -6,6 +6,7 @@ import AuroraGlowBackground from './backgrounds/aurora-glow-background';
 import Navbar from './components/navbar';
 import SplashScreen from './components/spash-screen';
 import CustomCursor from './components/custom-cursor';
+import { SplashAnimationProvider } from './contexts/splash-animation-context-provider';
 
 const inter = Inter({
     subsets: ['latin'],
@@ -43,16 +44,19 @@ export default function RootLayout({
                     'text-surface-light  dark:text-surface-dark'
                 }
             >
-                {/* <SplashScreen /> */}
-                <Navbar />
+                <SplashAnimationProvider>
+                    <SplashScreen />
 
-                {/* Main Content */}
-                <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30">
-                    {children}
-                </div>
+                    <Navbar />
 
-                {/* <CustomCursor /> */}
-                <AuroraGlowBackground />
+                    {/* Main Content */}
+                    <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30">
+                        {children}
+                    </div>
+
+                    {/* <CustomCursor /> */}
+                    <AuroraGlowBackground />
+                </SplashAnimationProvider>
             </body>
         </html>
     );

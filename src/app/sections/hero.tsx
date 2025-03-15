@@ -4,10 +4,11 @@ import { motion } from 'framer-motion';
 import CodeWindow from '../components/code-window';
 import LinkButton from '../components/link-button';
 import SocialBar from '../components/social-bar';
+import { useSplashAnimation } from '../contexts/splash-animation-context-provider';
 
 /** The Hero Section Component. Should appear at the top of the page. */
 export default function Hero() {
-    const staggerDuration = 0.2;
+    const { splashComplete } = useSplashAnimation();
 
     const fadeInFromLeft = {
         hidden: {
@@ -17,7 +18,7 @@ export default function Hero() {
         visible: {
             opacity: 1,
             transform: 'translateX(0px)',
-            transition: { type: 'spring', duration: 5 },
+            transition: { type: 'spring', duration: 3 },
         },
     };
 
@@ -26,8 +27,8 @@ export default function Hero() {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: staggerDuration,
-                delayChildren: 0.3,
+                delayChildren: 0.5,
+                staggerChildren: 0.5,
             },
         },
     };
@@ -38,7 +39,7 @@ export default function Hero() {
             <motion.div
                 variants={container}
                 initial="hidden"
-                animate="visible"
+                animate={splashComplete ? 'visible' : 'hidden'}
                 className="h-4/5 lg:h-full lg:col-span-11 flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-5"
             >
                 {/* Name */}
@@ -78,7 +79,11 @@ export default function Hero() {
             {/* Right Grid */}
             <motion.div
                 initial={{ transform: 'translateX(-10px)', opacity: 0 }}
-                animate={{ transform: 'translateX(0px)', opacity: 1 }}
+                animate={
+                    splashComplete
+                        ? { transform: 'translateX(0px)', opacity: 1 }
+                        : { transform: 'translateX(-10px)', opacity: 0 }
+                }
                 transition={{ type: 'spring', duration: 5, delay: 1 }}
                 className="flex flex-col justify-center w-full lg:col-span-9"
             >

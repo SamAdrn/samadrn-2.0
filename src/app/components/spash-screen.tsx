@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useSplashAnimation } from '../contexts/splash-animation-context-provider';
 
 /** Splash screen component. Provides an entry animation for the website. */
 export default function SplashScreen() {
@@ -16,6 +17,9 @@ export default function SplashScreen() {
 
     /** Whether the text should be shown */
     const [showText, setShowText] = useState(true);
+
+    /** Context used to tell other components that splash animation is completed */
+    const { setSplashComplete } = useSplashAnimation();
 
     useEffect(() => {
         // Prevent scrolling when splash screen is active
@@ -40,13 +44,14 @@ export default function SplashScreen() {
                     setTimeout(() => {
                         setShowSplash(false);
                         document.body.style.overflow = 'auto';
+                        setSplashComplete(true);
                     }, 600); // Delay after text hiding
                 }, 1000);
             }
         }, 100); // Typing Speed
 
         return () => clearInterval(typingInterval);
-    }, []);
+    }, [setSplashComplete]);
 
     return (
         <AnimatePresence>
