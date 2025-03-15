@@ -50,7 +50,7 @@ export default function RootLayout({
                     <Navbar />
 
                     {/* Main Content */}
-                    <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-48">
+                    <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30 xl:mx-48">
                         {children}
                     </div>
 

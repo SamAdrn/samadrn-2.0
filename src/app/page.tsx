@@ -2,35 +2,13 @@
 
 import { motion } from 'framer-motion';
 import CodeWindow from './components/code-window';
-import { useSplashAnimation } from './contexts/splash-animation-context-provider';
-import Hero from './sections/hero';
 import ThemeSwitcher from './components/theme-switcher';
+import { useSplashAnimation } from './contexts/splash-animation-context-provider';
+import About from './sections/about';
+import Hero from './sections/hero';
 
 export default function Page() {
     const { splashComplete } = useSplashAnimation();
-
-    const fadeInFromLeft = {
-        hidden: {
-            opacity: 0,
-            transform: 'translateX(-10px)',
-        },
-        visible: {
-            opacity: 1,
-            transform: 'translateX(0px)',
-            transition: { type: 'spring', duration: 3 },
-        },
-    };
-
-    const container = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                delayChildren: 0.5,
-                staggerChildren: 0.5,
-            },
-        },
-    };
 
     return (
         <div className="lg:flex lg:justify-between lg:gap-20">
@@ -39,13 +17,13 @@ export default function Page() {
             </div>
 
             {/* Hero - This is fixed and takes the left half of the screen on large */}
-            <div className="flex items-center justify-center pt-[40%] lg:pt-0 lg:sticky lg:top-0 lg:h-screen lg:w-[50%] lg:justify-start">
+            <div className="flex items-center justify-center pt-50 lg:pt-0 lg:sticky lg:top-0 lg:h-screen lg:w-[50%] lg:justify-start">
                 <Hero />
             </div>
 
             {/* Main Content */}
             <motion.main
-                className="pt-24 lg:pt-0 lg:w-[50%]"
+                className="pt-40 lg:pt-0 lg:w-[50%]"
                 initial={{ transform: 'translateX(-10px)', opacity: 0 }}
                 animate={
                     splashComplete
@@ -58,9 +36,9 @@ export default function Page() {
                     <CodeWindow />
                 </div>
 
-                <CodeWindow />
-                <CodeWindow />
-                <CodeWindow />
+                <About />
+
+                {/* <div className='h-50'></div> */}
             </motion.main>
         </div>
     );

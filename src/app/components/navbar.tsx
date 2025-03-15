@@ -52,10 +52,6 @@ export default function Navbar() {
                         SAMUEL KOSASIH
                     </Link>
                 </div>
-
-                <div>
-                    {/* <ThemeSwitcher /> */}
-                </div>
             </nav>
         </header>
     );
