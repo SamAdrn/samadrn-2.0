@@ -6,6 +6,7 @@ import ThemeSwitcher from './components/theme-switcher';
 import { useSplashAnimation } from './contexts/splash-animation-context-provider';
 import About from './sections/about';
 import Hero from './sections/hero';
+import { fadeInFromLeft } from './utils/animation-variants';
 
 export default function Page() {
     const { splashComplete } = useSplashAnimation();
@@ -24,13 +25,9 @@ export default function Page() {
             {/* Main Content */}
             <motion.main
                 className="pt-40 lg:pt-0 lg:w-[50%]"
-                initial={{ transform: 'translateX(-10px)', opacity: 0 }}
-                animate={
-                    splashComplete
-                        ? { transform: 'translateX(0px)', opacity: 1 }
-                        : { transform: 'translateX(-10px)', opacity: 0 }
-                }
-                transition={{ type: 'spring', duration: 5, delay: 1 }}
+                variants={fadeInFromLeft}
+                initial="hidden"
+                animate={splashComplete ? 'visibleDelay' : 'hidden'}
             >
                 <div className="lg:h-screen lg:flex lg:items-center">
                     <CodeWindow />

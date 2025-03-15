@@ -1,36 +1,14 @@
 import { motion } from 'framer-motion';
 import { useSplashAnimation } from '../contexts/splash-animation-context-provider';
+import { entryContainer, fadeInFromLeft } from '../utils/animation-variants';
 
 /** A bar containing links to various social media pages */
 export default function SocialBar() {
     const { splashComplete } = useSplashAnimation();
 
-    const fadeInFromLeft = {
-        hidden: {
-            opacity: 0,
-            transform: 'translateX(-10px)',
-        },
-        visible: {
-            opacity: 1,
-            transform: 'translateX(0px)',
-            transition: { type: 'spring', duration: 5 },
-        },
-    };
-
-    const container = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                delayChildren: 1,
-                staggerChildren: 0.3,
-            },
-        },
-    };
-
     return (
         <motion.div
-            variants={container}
+            variants={entryContainer}
             initial="hidden"
             animate={splashComplete ? 'visible' : 'hidden'}
             className="flex items-center space-x-8"

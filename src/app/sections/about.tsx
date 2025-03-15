@@ -94,8 +94,8 @@ export default function About() {
                         {/* <span className="hidden lg:inline h-[1px] w-6 ms-1 bg-surface-half-light/70 dark:bg-surface-half-dark"></span> */}
                         <span
                             className={
-                                'transition-colors duration-400 select-none ps-3 ' +
-                                'font-medium text-surface-light dark:text-surface-dark '
+                                'transition-colors duration-400 select-none ps-3 lg:ps-0 ' +
+                                'font-medium text-surface-half-light dark:text-surface-half-dark '
                             }
                         >
                             {stack.category}

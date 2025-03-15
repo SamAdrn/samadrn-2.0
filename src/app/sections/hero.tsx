@@ -4,37 +4,15 @@ import { motion } from 'framer-motion';
 import LinkButton from '../components/link-button';
 import SocialBar from '../components/social-bar';
 import { useSplashAnimation } from '../contexts/splash-animation-context-provider';
+import { entryContainer, fadeInFromLeft } from '../utils/animation-variants';
 
 /** The Hero Section Component. Should appear at the top of the page. */
 export default function Hero() {
     const { splashComplete } = useSplashAnimation();
 
-    const fadeInFromLeft = {
-        hidden: {
-            opacity: 0,
-            transform: 'translateX(-10px)',
-        },
-        visible: {
-            opacity: 1,
-            transform: 'translateX(0px)',
-            transition: { type: 'spring', duration: 5 },
-        },
-    };
-
-    const container = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                delayChildren: 1,
-                staggerChildren: 0.3,
-            },
-        },
-    };
-
     return (
         <motion.div
-            variants={container}
+            variants={entryContainer}
             initial="hidden"
             animate={splashComplete ? 'visible' : 'hidden'}
             className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-5"
