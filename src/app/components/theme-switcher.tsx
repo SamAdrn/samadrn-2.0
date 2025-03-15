@@ -1,8 +1,11 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useSplashAnimation } from '../contexts/splash-animation-context-provider';
 
 /** A button toggle to switch between light and dark mode */
 export default function ThemeSwitcher() {
+    const { splashComplete } = useSplashAnimation();
+
     /** Keeps track of the dark mode preference */
     const [darkMode, setDarkMode] = useState(false);
 
@@ -36,6 +39,13 @@ export default function ThemeSwitcher() {
     return (
         <motion.button
             onClick={toggleDarkMode}
+            initial={{ transform: 'translateX(-10px)', opacity: 0 }}
+            animate={
+                splashComplete
+                    ? { transform: 'translateX(0px)', opacity: 1 }
+                    : { transform: 'translateX(-10px)', opacity: 0 }
+            }
+            transition={{ type: 'spring', duration: 3, delay: 1 }}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
             className={

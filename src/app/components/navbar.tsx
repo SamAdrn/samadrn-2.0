@@ -7,7 +7,7 @@ import ThemeSwitcher from './theme-switcher';
 /** Navbar component. */
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,7 +54,7 @@ export default function Navbar() {
                 </div>
 
                 <div>
-                    <ThemeSwitcher />
+                    {/* <ThemeSwitcher /> */}
                 </div>
             </nav>
         </header>

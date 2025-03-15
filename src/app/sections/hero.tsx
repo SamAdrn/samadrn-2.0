@@ -70,7 +70,7 @@ export default function Hero() {
                 <LinkButton text="View my Resume" />
             </motion.div>
 
-            <div className='mt-10'>
+            <div className="mt-10">
                 <SocialBar />
             </div>
         </motion.div>
