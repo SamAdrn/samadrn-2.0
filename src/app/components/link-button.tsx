@@ -8,7 +8,7 @@ export default function LinkButton({ text }: LinkButtonProps) {
         <button className="select-none cursor-pointer inline group">
             <span
                 className={
-                    'inline text-lg transition-colors ' +
+                    'inline transition-colors ' +
                     'group-hover:text-accent-light/80 group-hover:dark:text-accent-dark/80'
                 }
             >

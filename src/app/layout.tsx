@@ -40,7 +40,7 @@ export default function RootLayout({
         <html lang="en">
             <body
                 className={
-                    `${jetBrainsMono.variable} ${montserrat.variable} ${inter.variable} text-lg font-sans antialiased transition-colors ` +
+                    `${jetBrainsMono.variable} ${montserrat.variable} ${inter.variable} font-sans antialiased transition-colors ` +
                     'text-surface-light  dark:text-surface-dark'
                 }
             >
@@ -50,7 +50,7 @@ export default function RootLayout({
                     <Navbar />
 
                     {/* Main Content */}
-                    <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-[10%]">
+                    <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-48">
                         {children}
                     </div>
 

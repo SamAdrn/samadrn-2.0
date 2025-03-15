@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import CodeWindow from '../components/code-window';
 import LinkButton from '../components/link-button';
 import SocialBar from '../components/social-bar';
 import { useSplashAnimation } from '../contexts/splash-animation-context-provider';
@@ -18,7 +17,7 @@ export default function Hero() {
         visible: {
             opacity: 1,
             transform: 'translateX(0px)',
-            transition: { type: 'spring', duration: 3 },
+            transition: { type: 'spring', duration: 5 },
         },
     };
 
@@ -27,68 +26,53 @@ export default function Hero() {
         visible: {
             opacity: 1,
             transition: {
-                delayChildren: 0.5,
-                staggerChildren: 0.5,
+                delayChildren: 1,
+                staggerChildren: 0.3,
             },
         },
     };
 
     return (
-        <div className="w-full h-screen lg:grid lg:grid-cols-20 lg:gap-x-7">
-            {/* Left Grid */}
-            <motion.div
-                variants={container}
-                initial="hidden"
-                animate={splashComplete ? 'visible' : 'hidden'}
-                className="h-4/5 lg:h-full lg:col-span-11 flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-5"
-            >
-                {/* Name */}
-                <motion.span
-                    variants={fadeInFromLeft}
-                    className={
-                        'mt-5 text-6xl xl:text-7xl font-title font-semibold leading-18 tracking-tight drop-shadow-md ' +
-                        'underline decoration-[0.5rem] underline-offset-8 decoration-amber-600/50 dark:decoration-sky-600/50'
-                    }
-                >
-                    Samuel Kosasih
-                </motion.span>
-
-                {/* Subtitle */}
-                <motion.span
-                    variants={fadeInFromLeft}
-                    className="mt-2 mx-10 md:mx-0 text-xl md:text-2xl font-semibold tracking-tight"
-                >
-                    Building efficient software solutions with clean code.
-                </motion.span>
-
-                {/* Footnote */}
-                <motion.div variants={fadeInFromLeft} className="mx-10 md:mx-0">
-                    <span className="me-2 text-surface-half-light dark:text-surface-half-dark">
-                        Mastering Front-End.{' '}
-                        <span className="hidden md:inline">
-                            Exploring Back-End.
-                        </span>
-                    </span>
-
-                    <LinkButton text="View my Resume" />
-                </motion.div>
-
-                <SocialBar />
-            </motion.div>
-
-            {/* Right Grid */}
-            <motion.div
-                initial={{ transform: 'translateX(-10px)', opacity: 0 }}
-                animate={
-                    splashComplete
-                        ? { transform: 'translateX(0px)', opacity: 1 }
-                        : { transform: 'translateX(-10px)', opacity: 0 }
+        <motion.div
+            variants={container}
+            initial="hidden"
+            animate={splashComplete ? 'visible' : 'hidden'}
+            className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-5"
+        >
+            {/* Name */}
+            <motion.span
+                variants={fadeInFromLeft}
+                className={
+                    'text-6xl font-title font-semibold leading-18 tracking-tight drop-shadow-md ' +
+                    'underline decoration-[0.5rem] underline-offset-8 decoration-amber-600/50 dark:decoration-sky-600/50'
                 }
-                transition={{ type: 'spring', duration: 5, delay: 1 }}
-                className="flex flex-col justify-center w-full lg:col-span-9"
             >
-                <CodeWindow />
+                Samuel Kosasih
+            </motion.span>
+
+            {/* Subtitle */}
+            <motion.span
+                variants={fadeInFromLeft}
+                className="mt-5 mx-10 md:mx-0 text-xl font-medium tracking-tight"
+            >
+                Building efficient software solutions with clean code.
+            </motion.span>
+
+            {/* Footnote */}
+            <motion.div variants={fadeInFromLeft} className="mx-10 md:mx-0">
+                <span className="me-2 text-surface-half-light dark:text-surface-half-dark">
+                    Mastering Front-End.{' '}
+                    <span className="hidden md:inline">
+                        Exploring Back-End.
+                    </span>
+                </span>
+
+                <LinkButton text="View my Resume" />
             </motion.div>
-        </div>
+
+            <div className='mt-10'>
+                <SocialBar />
+            </div>
+        </motion.div>
     );
 }
