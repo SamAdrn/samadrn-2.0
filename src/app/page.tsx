@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 
 import About from './components/sections/about';
+import Experience from './components/sections/experience';
 import Hero from './components/sections/hero';
 import Visual from './components/sections/visual';
 
@@ -20,13 +21,13 @@ export default function Page() {
             </div>
 
             {/* Hero - This is fixed and takes the left half of the screen on large */}
-            <div className="flex items-center justify-center pt-50 lg:pt-0 lg:sticky lg:top-0 lg:h-screen lg:w-[50%] lg:justify-start">
+            <div className="flex items-center justify-center pt-50 lg:pt-0 lg:sticky lg:top-0 lg:h-screen lg:w-[45%] lg:justify-start">
                 <Hero />
             </div>
 
             {/* Main Content */}
             <motion.main
-                className="pt-40 lg:pt-0 lg:w-[50%]"
+                className="pt-40 lg:pt-0 lg:w-[55%]"
                 variants={fadeInFromLeft}
                 initial="hidden"
                 animate={splashComplete ? 'visibleDelay' : 'hidden'}
@@ -34,6 +35,8 @@ export default function Page() {
                 <Visual />
 
                 <About />
+
+                <Experience />
 
                 {/* <div className='h-50'></div> */}
             </motion.main>
