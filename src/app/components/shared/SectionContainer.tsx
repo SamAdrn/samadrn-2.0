@@ -8,12 +8,7 @@ export default function SectionContainer({
     styleClass = '',
 }: SectionContainerProps) {
     return (
-        <div
-            className={
-                'w-full pt-24 flex flex-col lg:pt-0 lg:h-screen lg:justify-center ' +
-                styleClass
-            }
-        >
+        <div className={'w-full pt-24 lg:pt-35 flex flex-col ' + styleClass}>
             {children}
         </div>
     );

@@ -15,6 +15,9 @@
     --color-accent-light: var(--color-orange-700);
     --color-accent-dark: var(--color-sky-300);
 
+    --color-accent-half-light: var(--color-orange-300);
+    --color-accent-half-dark: var(--color-sky-700);
+
     --color-sun-yellow: var(--color-amber-500);
     --color-moon-blue: var(--color-violet-400);
 

@@ -8,7 +8,7 @@ export default function Subheader({ text }: SubheaderProps) {
         <div className="flex items-center">
             <span className="hidden lg:inline h-[2px] w-6 ms-1 bg-surface-half-light/70 dark:bg-surface-half-dark"></span>
             <span
-                className={'select-none font-bold text-xl lg:ps-3 tracking-tight'}
+                className={'select-none font-bold lg:ps-3 tracking-wider'}
             >
                 {text.toUpperCase()}
             </span>

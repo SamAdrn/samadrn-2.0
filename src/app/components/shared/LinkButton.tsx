@@ -9,7 +9,7 @@ export default function LinkButton({ text }: LinkButtonProps) {
             <span
                 className={
                     'inline transition-colors ' +
-                    'group-hover:text-accent-light/80 group-hover:dark:text-accent-dark/80'
+                    'group-hover:text-accent-light group-hover:dark:text-accent-dark'
                 }
             >
                 {text}
