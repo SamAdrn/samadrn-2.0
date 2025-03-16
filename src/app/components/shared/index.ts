@@ -1,3 +1,4 @@
+export { default as Chip } from './Chip';
 export { default as LinkButton } from './LinkButton';
 export { default as SectionContainer } from './SectionContainer';
 export { default as Subheader } from './Subheader';
