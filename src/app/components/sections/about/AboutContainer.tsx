@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import Subheader from '../components/subheader';
+import { Subheader } from '../../shared';
 
 interface TechIconProps {
     icon: string;
 }
 
 /** The About Section Component.*/
-export default function About() {
+export default function AboutContainer() {
     const coreLangs = [
         'typescript',
         'angular',

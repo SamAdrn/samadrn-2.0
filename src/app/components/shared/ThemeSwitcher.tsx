@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { useSplashAnimation } from '../contexts/splash-animation-context-provider';
-import { fadeInFromLeft } from '../utils/animation-variants';
+import { useSplashAnimation } from '../../lib/contexts/SplashAnimationProvider';
+import { fadeInFromLeft } from '../../lib/utils/AnimationVariants';
 
 /** A button toggle to switch between light and dark mode */
 export default function ThemeSwitcher() {

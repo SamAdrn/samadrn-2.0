@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { useSplashAnimation } from '../contexts/splash-animation-context-provider';
+import { useSplashAnimation } from '@/app/lib/contexts/SplashAnimationProvider';
 
 /** Splash screen component. Provides an entry animation for the website. */
 export default function SplashScreen() {

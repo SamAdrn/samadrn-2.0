@@ -1,12 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import CodeWindow from './components/code-window';
-import ThemeSwitcher from './components/theme-switcher';
-import { useSplashAnimation } from './contexts/splash-animation-context-provider';
-import About from './sections/about';
-import Hero from './sections/hero';
-import { fadeInFromLeft } from './utils/animation-variants';
+
+import About from './components/sections/about';
+import Hero from './components/sections/hero';
+import Visual from './components/sections/visual';
+
+import ThemeSwitcher from './components/shared/ThemeSwitcher';
+import { useSplashAnimation } from './lib/contexts/SplashAnimationProvider';
+import { fadeInFromLeft } from './lib/utils/AnimationVariants';
 
 export default function Page() {
     const { splashComplete } = useSplashAnimation();
@@ -29,9 +31,7 @@ export default function Page() {
                 initial="hidden"
                 animate={splashComplete ? 'visibleDelay' : 'hidden'}
             >
-                <div className="lg:h-screen lg:flex lg:items-center">
-                    <CodeWindow />
-                </div>
+                <Visual />
 
                 <About />
 

@@ -2,10 +2,9 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import ThemeSwitcher from './theme-switcher';
 
 /** Navbar component. */
-export default function Navbar() {
+export default function NavbarContainer() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
 

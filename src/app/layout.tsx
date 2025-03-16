@@ -2,11 +2,13 @@ import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono, Montserrat } from 'next/font/google';
 
 import './globals.css';
-import AuroraGlowBackground from './backgrounds/aurora-glow-background';
+
+import { CustomCursor, SplashScreen } from './components/global';
 import Navbar from './components/navbar';
-import SplashScreen from './components/spash-screen';
-import CustomCursor from './components/custom-cursor';
-import { SplashAnimationProvider } from './contexts/splash-animation-context-provider';
+
+
+import { AuroraGlowBackground } from './lib/backgrounds';
+import { SplashAnimationProvider } from './lib/contexts';
 
 const inter = Inter({
     subsets: ['latin'],

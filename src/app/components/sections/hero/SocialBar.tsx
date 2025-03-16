@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { useSplashAnimation } from '../contexts/splash-animation-context-provider';
-import { entryContainer, fadeInFromLeft } from '../utils/animation-variants';
+import { useSplashAnimation } from '@/app/lib/contexts';
+import { entryContainer, fadeInFromLeft } from '@/app/lib/utils';
 
 /** A bar containing links to various social media pages */
 export default function SocialBar() {

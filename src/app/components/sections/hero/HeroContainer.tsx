@@ -1,13 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import LinkButton from '../components/link-button';
-import SocialBar from '../components/social-bar';
-import { useSplashAnimation } from '../contexts/splash-animation-context-provider';
-import { entryContainer, fadeInFromLeft } from '../utils/animation-variants';
+
+import SocialBar from './SocialBar';
+import { LinkButton } from '../../shared';
+
+import { useSplashAnimation } from '@/app/lib/contexts';
+import { entryContainer, fadeInFromLeft } from '@/app/lib/utils';
 
 /** The Hero Section Component. Should appear at the top of the page. */
-export default function Hero() {
+export default function HeroContainer() {
     const { splashComplete } = useSplashAnimation();
 
     return (
