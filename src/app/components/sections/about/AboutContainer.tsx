@@ -49,7 +49,7 @@ export default function AboutContainer() {
     };
 
     return (
-        <SectionContainer styleClass='gap-10'>
+        <SectionContainer styleClass='gap-5 lg:gap-10'>
             <Subheader text="About Me" />
 
             <div
@@ -91,11 +91,10 @@ export default function AboutContainer() {
                 >
                     {/* Category */}
                     <div className="flex items-center">
-                        {/* <span className="hidden lg:inline h-[1px] w-6 ms-1 bg-surface-half-light/70 dark:bg-surface-half-dark"></span> */}
                         <span
                             className={
-                                'transition-colors duration-400 select-none ps-3 lg:ps-0 ' +
-                                'font-medium text-surface-half-light dark:text-surface-half-dark '
+                                'transition-colors duration-400 select-none lg:ps-0 ' +
+                                'font-medium text-surface-light dark:text-surface-dark '
                             }
                         >
                             {stack.category}
