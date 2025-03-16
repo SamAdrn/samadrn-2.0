@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Subheader } from '../../shared';
+import { SectionContainer, Subheader } from '../../shared';
 
 interface TechIconProps {
     icon: string;
@@ -33,23 +33,23 @@ export default function AboutContainer() {
         { category: 'Experienced With', langs: expLangs },
     ];
 
-    const TechIcon = (props: TechIconProps) => {
+    const TechIcon = ({ icon }: TechIconProps) => {
         return (
             <motion.img
-                key={props.icon}
+                key={icon}
                 className="h-8 drop-shadow-sm duration-400 transition-opacity opacity-80"
                 whileHover={{
                     scale: 1.1,
                     transition: { type: 'spring', duration: 0.3 },
                 }}
-                src={`/icons/${props.icon}.svg`}
-                alt={`${props.icon} Icon`}
+                src={`/icons/${icon}.svg`}
+                alt={`${icon} Icon`}
             />
         );
     };
 
     return (
-        <div className="w-full pt-24 flex flex-col gap-10 lg:pt-0 lg:h-screen lg:justify-center">
+        <SectionContainer styleClass='gap-10'>
             <Subheader text="About Me" />
 
             <div
@@ -112,6 +112,6 @@ export default function AboutContainer() {
                     </div>
                 </div>
             ))}
-        </div>
+        </SectionContainer>
     );
 }

@@ -1,9 +1,12 @@
-import CodeWindow from "./CodeWindow";
+'use client';
+
+import CodeWindow from './CodeWindow';
+import { SectionContainer } from '../../shared';
 
 export default function VisualContainer() {
     return (
-        <div className="lg:h-screen lg:flex lg:items-center">
+        <SectionContainer>
             <CodeWindow />
-        </div>
+        </SectionContainer>
     );
 }
