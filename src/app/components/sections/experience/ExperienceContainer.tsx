@@ -100,7 +100,7 @@ export default function ExperienceContainer() {
             <Subheader text="Experiences" />
 
             {/* Experiences List */}
-            <ul className="group/menu mt-7 flex flex-col gap-y-12">
+            <ul className="group/menu flex flex-col gap-y-12">
                 {items.map((item, i) => (
                     <li
                         key={i}

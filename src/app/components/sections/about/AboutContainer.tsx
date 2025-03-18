@@ -49,7 +49,7 @@ export default function AboutContainer() {
     };
 
     return (
-        <SectionContainer styleClass='gap-5 lg:gap-10'>
+        <SectionContainer>
             <Subheader text="About Me" />
 
             <div
@@ -86,7 +86,7 @@ export default function AboutContainer() {
                 <div
                     key={stack.category}
                     className={
-                        'flex flex-col gap-5 group text-surface-light dark:text-surface-dark transition-all duration-300'
+                        'mt-7 flex flex-col gap-5 group text-surface-light dark:text-surface-dark transition-all duration-300'
                     }
                 >
                     {/* Category */}
