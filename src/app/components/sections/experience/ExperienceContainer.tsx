@@ -117,6 +117,7 @@ export default function ExperienceContainer() {
                             }
                         ></div>
 
+                        {/* Overlay for link */}
                         <a
                             className="bg-transparent absolute inset-0 z-10"
                             href={item.link}
@@ -179,7 +180,7 @@ export default function ExperienceContainer() {
                             </ul>
 
                             {/* Category chips */}
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 mt-1">
                                 {item.categories.map((category, i) => (
                                     <Chip key={i} text={category} />
                                 ))}
