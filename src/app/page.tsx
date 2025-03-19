@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import About from './components/sections/about';
 import Experience from './components/sections/experience';
 import Hero from './components/sections/hero';
+import Project from './components/sections/project';
 import Visual from './components/sections/visual';
 
 import ThemeSwitcher from './components/shared/ThemeSwitcher';
@@ -38,7 +39,9 @@ export default function Page() {
 
                 <Experience />
 
-                <div className='h-50'></div>
+                <Project />
+
+                <div className="h-50"></div>
             </motion.main>
         </div>
     );
