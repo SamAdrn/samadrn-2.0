@@ -105,7 +105,7 @@ export default function ExperienceContainer() {
                     <li
                         key={i}
                         className={
-                            'group/item relative cursor-pointer transition-all duration-300 ' +
+                            'group/item relative transition-all duration-300 ' +
                             'group-hover/menu:opacity-50 hover:!opacity-100'
                         }
                     >
@@ -119,11 +119,11 @@ export default function ExperienceContainer() {
 
                         {/* Overlay for link */}
                         <a
-                            className="bg-transparent absolute inset-0 z-10"
+                            className="bg-transparent absolute inset-0 z-10 cursor-pointer"
                             href={item.link}
                             target="_blank"
                             rel="noreferrer noopener"
-                            aria-label={item.place + '(opens in a new tab)'}
+                            aria-label={item.place + ' (opens in a new tab)'}
                         />
 
                         {/* Content */}

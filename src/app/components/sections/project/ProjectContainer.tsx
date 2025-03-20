@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Chip, SectionContainer, Subheader } from '../../shared';
+import { useModal } from '@/app/lib/contexts';
 
 interface ProjectItem {
     title: string;
@@ -12,6 +13,8 @@ interface ProjectItem {
 }
 
 export default function ProjectContainer() {
+    const { openModal } = useModal();
+
     const items: ProjectItem[] = [
         {
             title: 'Pocket Garage',
@@ -88,7 +91,7 @@ export default function ProjectContainer() {
                 {items.map((item, i) => (
                     <li
                         key={i}
-                        className="group/item relative cursor-pointer transition-all duration-300 group-hover/menu:opacity-50 hover:!opacity-100"
+                        className="group/item relative transition-all duration-300 group-hover/menu:opacity-50 hover:!opacity-100"
                     >
                         {/* Hover Effect */}
                         <div
@@ -98,10 +101,17 @@ export default function ProjectContainer() {
                             }
                         ></div>
 
+                        {/* Overlay for Modal Button */}
+                        {/* <button
+                            className="bg-transparent absolute inset-0 z-10 cursor-pointer"
+                            aria-label={'View details for ' + item.title}
+                            onClick={() => handleOpenProjectModal(item)}
+                        /> */}
+
                         {/* Content */}
                         <div className="flex flex-col md:flex-row items-start gap-5 z-5 relative">
                             {/* Project Image */}
-                            <div className="w-full md:w-5/10 lg:w-2/5 h-45 md:h-45 lg:h-35">
+                            <div className="w-full md:w-5/10 lg:w-2/5 h-45 md:h-45 lg:h-35 xl:h-45 dark:opacity-75 transition-opacity">
                                 <motion.img
                                     className="object-cover w-full h-full rounded-md shadow-sm"
                                     src={`/projects/${item.folder}/thumb.png`}

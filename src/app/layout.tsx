@@ -6,9 +6,8 @@ import './globals.css';
 import { CustomCursor, SplashScreen } from './components/global';
 import Navbar from './components/navbar';
 
-
 import { AuroraGlowBackground } from './lib/backgrounds';
-import { SplashAnimationProvider } from './lib/contexts';
+import { ModalProvider, SplashAnimationProvider } from './lib/contexts';
 
 const inter = Inter({
     subsets: ['latin'],
@@ -47,17 +46,19 @@ export default function RootLayout({
                 }
             >
                 <SplashAnimationProvider>
-                    {/* <SplashScreen /> */}
+                    <ModalProvider>
+                        {/* <SplashScreen /> */}
 
-                    <Navbar />
+                        <Navbar />
 
-                    {/* Main Content */}
-                    <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30 xl:mx-40">
-                        {children}
-                    </div>
+                        {/* Main Content */}
+                        <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30 xl:mx-40">
+                            {children}
+                        </div>
 
-                    {/* <CustomCursor /> */}
-                    <AuroraGlowBackground />
+                        {/* <CustomCursor /> */}
+                        <AuroraGlowBackground />
+                    </ModalProvider>
                 </SplashAnimationProvider>
             </body>
         </html>
