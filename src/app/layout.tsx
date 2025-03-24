@@ -42,7 +42,7 @@ export default function RootLayout({
             <body
                 className={
                     `${jetBrainsMono.variable} ${montserrat.variable} ${inter.variable} font-sans antialiased transition-colors ` +
-                    'text-surface-light  dark:text-surface-dark'
+                    'text-surface-light  dark:text-surface-dark selection:bg-orange-200 selection:text-orange-800 dark:selection:bg-sky-900 dark:selection:text-sky-500 selection:transition-colors'
                 }
             >
                 <SplashAnimationProvider>

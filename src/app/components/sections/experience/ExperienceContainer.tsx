@@ -96,7 +96,7 @@ export default function ExperienceContainer() {
     ];
 
     return (
-        <SectionContainer>
+        <SectionContainer id='experiences'>
             <Subheader text="Experiences" />
 
             {/* Experiences List */}

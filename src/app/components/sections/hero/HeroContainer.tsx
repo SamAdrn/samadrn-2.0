@@ -7,6 +7,7 @@ import { LinkButton } from '../../shared';
 
 import { useSplashAnimation } from '@/app/lib/contexts';
 import { entryContainer, fadeInFromLeft } from '@/app/lib/utils';
+import NavigationBar from './NavigationBar';
 
 /** The Hero Section Component. Should appear at the top of the page. */
 export default function HeroContainer() {
@@ -50,7 +51,11 @@ export default function HeroContainer() {
                 <LinkButton text="View my Resume" />
             </motion.div>
 
-            <div className="mt-10">
+            <div className="mt-5 w-full">
+                <NavigationBar />
+            </div>
+
+            <div className="mt-5">
                 <SocialBar />
             </div>
         </motion.div>

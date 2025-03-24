@@ -107,7 +107,7 @@ export default function ProjectContainer() {
     ];
 
     return (
-        <SectionContainer>
+        <SectionContainer id="projects">
             <Subheader text="Projects" />
 
             {/* Projects List */}

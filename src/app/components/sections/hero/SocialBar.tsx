@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion';
 import { useSplashAnimation } from '@/app/lib/contexts';
 import { entryContainer, fadeInFromLeft } from '@/app/lib/utils';

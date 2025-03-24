@@ -49,7 +49,7 @@ export default function AboutContainer() {
     };
 
     return (
-        <SectionContainer>
+        <SectionContainer id="about">
             <Subheader text="About Me" />
 
             <div
