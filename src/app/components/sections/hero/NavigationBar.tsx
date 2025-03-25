@@ -1,10 +1,15 @@
 'use client';
 
+import { useSplashAnimation } from '@/app/lib/contexts';
+import { entryContainer, fadeInFromLeft } from '@/app/lib/utils';
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 type NavTitle = 'about' | 'experiences' | 'projects';
 
 export default function NavigationBar() {
+    const { splashComplete } = useSplashAnimation();
+
     const navs: NavTitle[] = ['about', 'experiences', 'projects'];
     const [activeSection, setActiveSection] = useState<NavTitle>('about');
 
@@ -50,28 +55,36 @@ export default function NavigationBar() {
     };
 
     return (
-        <div
-            className={
-                'w-full border-1 border-surface-half-light/70 dark:border-surface-half-dark rounded-lg cursor-pointer ' +
-                'hidden lg:flex'
-            }
+        <motion.div
+            variants={entryContainer}
+            initial="hidden"
+            animate={splashComplete ? 'visible' : 'hidden'}
         >
-            {navs.map((nav) => (
-                <div
-                    key={nav}
-                    onClick={() => handleNavClick(nav)}
-                    className={
-                        'transition-all flex-1 p-1.5 m-0.5 text-center align-middle rounded-md uppercase text-xs backdrop-blur-sm ' +
-                        (activeSection === nav
-                            ? 'font-medium shadow-sm bg-white/40 dark:bg-gray-800/70 opacity-100 ' +
-                              'text-accent-light dark:text-accent-dark'
-                            : 'hover:bg-white/40 dark:hover:bg-gray-800/70 ' +
-                              'opacity-70 text-surface-half-light dark:text-surface-half-dark')
-                    }
-                >
-                    {nav}
-                </div>
-            ))}
-        </div>
+            <motion.div
+                variants={fadeInFromLeft}
+                className={
+                    'w-full border-1 border-surface-half-light/70 dark:border-surface-half-dark rounded-lg cursor-pointer ' +
+                    'hidden lg:flex'
+                }
+            >
+                {navs.map((nav) => (
+                    <motion.div
+                        key={nav}
+                        onClick={() => handleNavClick(nav)}
+                        variants={fadeInFromLeft}
+                        className={
+                            'transition-all flex-1 p-1.5 m-0.5 text-center align-middle rounded-md uppercase text-xs backdrop-blur-sm ' +
+                            (activeSection === nav
+                                ? 'font-medium shadow-sm bg-white/40 dark:bg-gray-800/70 opacity-100 ' +
+                                  'text-accent-light dark:text-accent-dark'
+                                : 'hover:bg-white/40 dark:hover:bg-gray-800/70 ' +
+                                  'opacity-70 text-surface-half-light dark:text-surface-half-dark')
+                        }
+                    >
+                        {nav}
+                    </motion.div>
+                ))}
+            </motion.div>
+        </motion.div>
     );
 }

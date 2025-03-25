@@ -47,7 +47,7 @@ export default function Page() {
                         'text-sm opacity-50 flex items-center'
                     }
                 >
-                    Built with Next.js and Tailwind | Samuel Kosasih © 2025
+                    Built with Next.js and Tailwind | By Samuel Kosasih © 2025
                 </div>
             </motion.main>
         </div>
