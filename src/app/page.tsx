@@ -41,7 +41,14 @@ export default function Page() {
 
                 <Project />
 
-                <div className="h-50"></div>
+                <div
+                    className={
+                        'h-50 text-surface-half-light dark:text-surface-half-dark ' +
+                        'text-sm opacity-50 flex items-center'
+                    }
+                >
+                    Built with Next.js and Tailwind | Samuel Kosasih © 2025
+                </div>
             </motion.main>
         </div>
     );
