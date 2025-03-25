@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Chip, SectionContainer, Subheader } from '../../shared';
+import { Chip, LinkButton, SectionContainer, Subheader } from '../../shared';
 
 type ProjectLinkType = 'Devpost' | 'Github';
 
@@ -29,14 +29,6 @@ export default function ProjectContainer() {
             },
         },
         {
-            title: 'Unity',
-            folder: 'unity',
-            date: 'May 2023',
-            description:
-                'Gamified Lifestyle App that encourages users to explore their surroundings',
-            categories: ['Swift', 'Academic'],
-        },
-        {
             title: 'Triples',
             folder: 'triples',
             date: 'April 2023',
@@ -54,30 +46,6 @@ export default function ProjectContainer() {
             link: {
                 type: 'Github',
                 href: 'https://github.com/SamAdrn/Testudo-Revamp',
-            },
-        },
-        {
-            title: 'The Simon Game',
-            folder: 'simon-game',
-            date: 'October 2022',
-            description:
-                'Recreation of the classic Simon Game to practice CSS and JavaScript',
-            categories: ['HTML + CSS', 'jQuery'],
-            link: {
-                type: 'Github',
-                href: 'https://github.com/SamAdrn/Simon-Game/',
-            },
-        },
-        {
-            title: 'Tic Tac Toe',
-            folder: 'tic-tac-toe',
-            date: 'July 2022',
-            description:
-                'Terminal Tic Tac Toe to learn more about Game Theory and OOP',
-            categories: ['Ruby'],
-            link: {
-                type: 'Github',
-                href: 'https://github.com/SamAdrn/TicTacToe',
             },
         },
         {
@@ -210,6 +178,47 @@ export default function ProjectContainer() {
                     </li>
                 ))}
             </ul>
+
+            <div className="mt-10 lg:mt-14">
+                <button className="select-none cursor-pointer flex items-center group opacity-70 hover:opacity-100">
+                    <span
+                        className={
+                            'hidden lg:inline h-[2px] w-20 ms-1 me-4 bg-surface-half-light/70 dark:bg-surface-half-dark ' +
+                            'transition-colors group-hover:bg-accent-light/80 dark:group-hover:bg-accent-dark'
+                        }
+                    ></span>
+
+                    <span
+                        className={
+                            'transition-colors text-surface-half-light dark:text-surface-half-dark ' +
+                            'group-hover:text-accent-light group-hover:dark:text-accent-dark'
+                        }
+                    >
+                        View my GitHub Page
+                    </span>
+
+                    {/* TR Arrow */}
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.7}
+                        stroke="currentColor"
+                        className={
+                            'size-4 inline mb-0.5 ms-2 transition-all transform ' +
+                            'text-surface-half-light dark:text-surface-half-dark ' +
+                            'group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ' +
+                            'group-hover:text-accent-light/80 group-hover:dark:text-accent-dark/80'
+                        }
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                        />
+                    </svg>
+                </button>
+            </div>
         </SectionContainer>
     );
 }

@@ -50,7 +50,12 @@ export default function NavigationBar() {
     };
 
     return (
-        <div className="w-full border-1 border-surface-half-light/70 dark:border-surface-half-dark rounded-lg flex cursor-pointer">
+        <div
+            className={
+                'w-full border-1 border-surface-half-light/70 dark:border-surface-half-dark rounded-lg cursor-pointer ' +
+                'hidden lg:flex'
+            }
+        >
             {navs.map((nav) => (
                 <div
                     key={nav}

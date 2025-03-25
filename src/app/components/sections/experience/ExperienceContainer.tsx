@@ -180,7 +180,7 @@ export default function ExperienceContainer() {
                             </ul>
 
                             {/* Category chips */}
-                            <div className="flex gap-2 mt-1">
+                            <div className="flex flex-wrap gap-2 mt-1">
                                 {item.categories.map((category, i) => (
                                     <Chip key={i} text={category} />
                                 ))}
