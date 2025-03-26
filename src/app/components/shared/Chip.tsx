@@ -9,7 +9,7 @@ export default function Chip({ text }: ChipProps) {
         <div
             className={
                 'rounded-md px-2 py-1 flex items-center justify-center ' +
-                'bg-accent-half-light/30 dark:bg-accent-half-dark/30 ' +
+                'bg-accent-half-light/20 dark:bg-accent-half-dark/30 ' +
                 'text-xs text-accent-light dark:text-accent-dark'
             }
         >
