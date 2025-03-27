@@ -1,3 +1,5 @@
+'use client';
+
 interface SubheaderProps {
     text: string;
 }

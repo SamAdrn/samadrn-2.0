@@ -1,3 +1,5 @@
+'use client';
+
 /** Displays a Code Window */
 export default function CodeWindow() {
     return (

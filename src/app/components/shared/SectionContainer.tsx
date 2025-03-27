@@ -1,3 +1,5 @@
+'use client';
+
 interface SectionContainerProps {
     children: React.ReactNode;
     id: string;
