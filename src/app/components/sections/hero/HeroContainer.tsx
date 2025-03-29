@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import SocialBar from './SocialBar';
 import { LinkButton } from '../../shared';
@@ -11,6 +12,7 @@ import NavigationBar from './NavigationBar';
 
 /** The Hero Section Component. Should appear at the top of the page. */
 export default function HeroContainer() {
+    const { t } = useTranslation();
     const { splashComplete } = useSplashAnimation();
 
     return (
@@ -28,7 +30,7 @@ export default function HeroContainer() {
                     'underline decoration-[0.5rem] underline-offset-8 decoration-amber-600/50 dark:decoration-sky-600/50'
                 }
             >
-                Samuel Kosasih
+                {t('STR_HERO.NAME')}
             </motion.span>
 
             {/* Subtitle */}

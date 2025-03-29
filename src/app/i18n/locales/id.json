@@ -1,5 +1,5 @@
 {
-    "hero": {
-        "greeting": "Halo"
+    "STR_HERO": {
+        "NAME": "Samuel Kosasih"
     }
 }

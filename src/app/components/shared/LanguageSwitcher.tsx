@@ -34,6 +34,7 @@ export default function LanguageSwitcher() {
         >
             {langs.map((langType) => (
                 <button
+                    key={langType.lang}
                     onClick={() => changeLanguage(langType.lang)}
                     className={
                         'w-full p-2 cursor-pointer transition-all rounded-md ' +
