@@ -17,7 +17,8 @@
             "PROJECTS": "Projects",
             "ARIA": {
                 "CURRENT": "Currently in {{section}}",
-                "SCROLL_TO": "Scroll to {{section}}"
+                "SCROLL_TO": "Scroll to {{section}}",
+                "OPENS_NEW_TAB": "{{target}} (opens in new tab)"
             }
         }
     }

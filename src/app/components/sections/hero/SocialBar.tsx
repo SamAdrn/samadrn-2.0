@@ -2,14 +2,18 @@
 
 import { motion } from 'framer-motion';
 import { useSplashAnimation } from '@/app/lib/contexts';
-import { entryContainer, fadeInFromLeft } from '@/app/lib/utils';
+import { entryContainer, fadeInFromLeft, socials } from '@/app/lib/utils';
+import { useTranslation } from 'react-i18next';
 
 /** A bar containing links to various social media pages */
 export default function SocialBar() {
+    const { t } = useTranslation();
     const { splashComplete } = useSplashAnimation();
+    const { github, linkedin, spotify } = socials;
 
     return (
         <motion.div
+            id="social-bar-container"
             variants={entryContainer}
             initial="hidden"
             animate={splashComplete ? 'visible' : 'hidden'}
@@ -22,15 +26,18 @@ export default function SocialBar() {
 
             {/* GitHub */}
             <motion.a
+                id={`social-bar-${github.type}-link`}
                 variants={fadeInFromLeft}
                 className="group"
-                href="https://github.com/SamAdrn"
+                href={github.link}
                 target="_blank"
                 rel="noreferrer noopener"
-                aria-label="GitHub (opens in a new tab)"
-                title="GitHub"
+                aria-label={t('STR_MISC.NAVIGATION.ARIA.OPENS_NEW_TAB', {
+                    target: github.label,
+                })}
+                title={github.label}
             >
-                <span className="sr-only">GitHub</span>
+                <span className="sr-only">{github.label}</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={
@@ -47,15 +54,18 @@ export default function SocialBar() {
 
             {/* LinkedIn */}
             <motion.a
+                id={`social-bar-${linkedin.type}-link`}
                 variants={fadeInFromLeft}
                 className="group"
-                href="https://www.linkedin.com/in/samkosasih/"
+                href={linkedin.link}
                 target="_blank"
                 rel="noreferrer noopener"
-                aria-label="LinkedIn (opens in a new tab)"
-                title="LinkedIn"
+                aria-label={t('STR_MISC.NAVIGATION.ARIA.OPENS_NEW_TAB', {
+                    target: linkedin.label,
+                })}
+                title={linkedin.label}
             >
-                <span className="sr-only">LinkedIn</span>
+                <span className="sr-only">{linkedin.label}</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={
@@ -72,15 +82,18 @@ export default function SocialBar() {
 
             {/* Spotify */}
             <motion.a
+                id={`social-bar-${spotify.type}-link`}
                 variants={fadeInFromLeft}
                 className="group"
-                href="https://open.spotify.com/user/31dzjlx5ll7imlrvwoaappx4kngu?si=e9b4f497b9a04e02"
+                href={spotify.link}
                 target="_blank"
                 rel="noreferrer noopener"
-                aria-label="Spotify (opens in a new tab)"
-                title="Spotify"
+                aria-label={t('STR_MISC.NAVIGATION.ARIA.OPENS_NEW_TAB', {
+                    target: spotify.label,
+                })}
+                title={spotify.label}
             >
-                <span className="sr-only">Spotify</span>
+                <span className="sr-only">{spotify.label}</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={
