@@ -3,7 +3,7 @@
 /** Displays a Code Window */
 export default function CodeWindow() {
     return (
-        <div className="relative w-full">
+        <div id="code-window-container" className="relative w-full">
             {/* Outer Glass Pane */}
             <div
                 className={
