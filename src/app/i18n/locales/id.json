@@ -1,5 +1,15 @@
 {
     "STR_HERO": {
-        "NAME": "Samuel Kosasih"
+        "NAME": "Samuel Kosasih",
+        "SUBTITLE": "Membangung perangkat lunak dengan kode yang efisien dan bersih.",
+        "FOOTNOTE": {
+            "1": "Mastering Front-End.",
+            "2": "Exploring Back-End."
+        }
+    },
+    "STR_MISC": {
+        "ACTION": {
+            "VIEW_RESUME": "View My Resume"
+        }
     }
 }

@@ -1,24 +1,27 @@
 'use client';
 
 interface LinkButtonProps {
-    text: string;
+    id: string;
+    label: string;
 }
 
 /** A button that resembles a link */
-export default function LinkButton({ text }: LinkButtonProps) {
+export default function LinkButton({ id, label }: LinkButtonProps) {
     return (
-        <button className="select-none cursor-pointer inline group">
+        <button id={id} className="select-none cursor-pointer inline group">
             <span
+                id={`${id}-label`}
                 className={
                     'inline transition-colors ' +
                     'group-hover:text-accent-light group-hover:dark:text-accent-dark'
                 }
             >
-                {text}
+                {label}
             </span>
 
             {/* TR Arrow */}
             <svg
+                id={`${id}-arrow-svg`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"

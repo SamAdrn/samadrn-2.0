@@ -16,7 +16,8 @@ export default function HeroContainer() {
     const { splashComplete } = useSplashAnimation();
 
     return (
-        <motion.div
+        <motion.section
+            id="hero-section"
             variants={entryContainer}
             initial="hidden"
             animate={splashComplete ? 'visible' : 'hidden'}
@@ -24,6 +25,7 @@ export default function HeroContainer() {
         >
             {/* Name */}
             <motion.span
+                id="hero-name"
                 variants={fadeInFromLeft}
                 className={
                     'text-6xl font-title font-semibold leading-18 tracking-tight drop-shadow-md ' +
@@ -35,22 +37,30 @@ export default function HeroContainer() {
 
             {/* Subtitle */}
             <motion.span
+                id="hero-subtitle"
                 variants={fadeInFromLeft}
                 className="mt-5 mx-10 md:mx-0 text-xl font-medium tracking-tight"
             >
-                Building efficient software solutions with clean code.
+                {t('STR_HERO.SUBTITLE')}
             </motion.span>
 
             {/* Footnote */}
-            <motion.div variants={fadeInFromLeft} className="mx-10 md:mx-0">
+            <motion.div
+                id="hero-footnote"
+                variants={fadeInFromLeft}
+                className="mx-10 md:mx-0"
+            >
                 <span className="me-2 text-surface-half-light dark:text-surface-half-dark">
-                    Mastering Front-End.{' '}
+                    {t('STR_HERO.FOOTNOTE.1')}{' '}
                     <span className="hidden md:inline">
-                        Exploring Back-End.
+                        {t('STR_HERO.FOOTNOTE.2')}
                     </span>
                 </span>
 
-                <LinkButton text="View my Resume" />
+                <LinkButton
+                    id="hero-view-resume-btn"
+                    label={t('STR_MISC.ACTION.VIEW_RESUME')}
+                />
             </motion.div>
 
             <div className="mt-5 w-full">
@@ -60,6 +70,6 @@ export default function HeroContainer() {
             <div className="mt-5">
                 <SocialBar />
             </div>
-        </motion.div>
+        </motion.section>
     );
 }
