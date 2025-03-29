@@ -10,6 +10,15 @@
     "STR_MISC": {
         "ACTION": {
             "VIEW_RESUME": "View My Resume"
+        },
+        "NAVIGATION": {
+            "ABOUT": "About",
+            "EXPERIENCES": "Experiences",
+            "PROJECTS": "Projects",
+            "ARIA": {
+                "CURRENT": "Currently in {{section}}",
+                "SCROLL_TO": "Scroll to {{section}}"
+            }
         }
     }
 }
