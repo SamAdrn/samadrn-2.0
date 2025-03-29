@@ -42,12 +42,12 @@ export default function NavbarContainer() {
                 className={
                     'fixed bg-transparent top-0 left-0 right-0 z-50 px-5 md:px-20 flex justify-between items-center h-[var(--navbar-height)] transition-all duration-300 ' +
                     (isScrolled
-                        ? 'backdrop-blur-sm bg-white/10 dark:bg-gray-900/10 shadow-xs'
+                        ? 'backdrop-blur-sm bg-white/50 dark:bg-gray-900/10 shadow-xs'
                         : 'bg-transparent')
                 }
             >
                 <div className="flex items-center justify-between">
-                    <Link href="#" className="text-2xl font-semibold font-mono">
+                    <Link href="#" className="md:pt-1 text-xl lg:text-2xl font-semibold font-mono">
                         SAMUEL KOSASIH
                     </Link>
                 </div>

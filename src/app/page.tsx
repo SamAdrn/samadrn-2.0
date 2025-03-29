@@ -7,8 +7,8 @@ import Experience from './components/sections/experience';
 import Hero from './components/sections/hero';
 import Project from './components/sections/project';
 import Visual from './components/sections/visual';
+import { LanguageSwitcher, ThemeSwitcher } from './components/shared';
 
-import ThemeSwitcher from './components/shared/ThemeSwitcher';
 import { useSplashAnimation } from './lib/contexts/SplashAnimationProvider';
 import { fadeInFromLeft } from './lib/utils/AnimationVariants';
 
@@ -17,8 +17,12 @@ export default function Page() {
 
     return (
         <div className="lg:flex lg:justify-between lg:gap-20">
-            <div className="z-50 fixed top-5 right-5 md:right-20 block">
+            <div className="z-50 fixed top-5.5 md:top-4.5 right-5 md:right-18 block">
                 <ThemeSwitcher />
+            </div>
+
+            <div className="z-50 fixed top-6 lg:top-20 right-16 md:right-35 lg:right-18 block">
+                <LanguageSwitcher />
             </div>
 
             {/* Hero - This is fixed and takes the left half of the screen on large */}

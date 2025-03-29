@@ -7,7 +7,13 @@ import { CustomCursor, SplashScreen } from './components/global';
 import Navbar from './components/navbar';
 
 import { AuroraGlowBackground } from './lib/backgrounds';
-import { ModalProvider, SplashAnimationProvider } from './lib/contexts';
+import {
+    LanguageProvider,
+    ModalProvider,
+    SplashAnimationProvider,
+} from './lib/contexts';
+
+import './i18n';
 
 const inter = Inter({
     subsets: ['latin'],
@@ -42,24 +48,28 @@ export default function RootLayout({
             <body
                 className={
                     `${jetBrainsMono.variable} ${montserrat.variable} ${inter.variable} font-sans antialiased transition-colors ` +
-                    'text-surface-light  dark:text-surface-dark selection:bg-orange-200 selection:text-orange-800 dark:selection:bg-sky-900 dark:selection:text-sky-500 selection:transition-colors'
+                    'text-surface-light  dark:text-surface-dark ' +
+                    'selection:bg-orange-200 selection:text-orange-800 ' +
+                    'dark:selection:bg-sky-900 dark:selection:text-sky-500 selection:transition-colors'
                 }
             >
-                <SplashAnimationProvider>
-                    <ModalProvider>
-                        {/* <SplashScreen /> */}
+                <LanguageProvider>
+                    <SplashAnimationProvider>
+                        <ModalProvider>
+                            {/* <SplashScreen /> */}
 
-                        <Navbar />
+                            <Navbar />
 
-                        {/* Main Content */}
-                        <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30 xl:mx-40">
-                            {children}
-                        </div>
+                            {/* Main Content */}
+                            <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30 xl:mx-40">
+                                {children}
+                            </div>
 
-                        {/* <CustomCursor /> */}
-                        <AuroraGlowBackground />
-                    </ModalProvider>
-                </SplashAnimationProvider>
+                            {/* <CustomCursor /> */}
+                            <AuroraGlowBackground />
+                        </ModalProvider>
+                    </SplashAnimationProvider>
+                </LanguageProvider>
             </body>
         </html>
     );

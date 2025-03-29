@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Chip, LinkButton, SectionContainer, Subheader } from '../../shared';
+import { Chip, SectionContainer, Subheader } from '../../shared';
 
 type ProjectLinkType = 'Devpost' | 'Github';
 
@@ -89,7 +89,7 @@ export default function ProjectContainer() {
                         <div
                             className={
                                 'bg-transparent absolute lg:-inset-y-4 lg:-inset-x-6 z-0 transition-colors rounded-lg  ' +
-                                'group-hover/item:shadow-sm group-hover/item:backdrop-blur-sm group-hover/item:bg-white/40 dark:group-hover/item:bg-gray-800/40'
+                                'group-hover/item:shadow-sm group-hover/item:backdrop-blur-sm group-hover/item:bg-white/40 dark:group-hover/item:bg-gray-700/50'
                             }
                         ></div>
 

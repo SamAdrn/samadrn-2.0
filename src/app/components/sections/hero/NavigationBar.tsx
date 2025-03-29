@@ -77,8 +77,8 @@ export default function NavigationBar() {
                             (activeSection === nav
                                 ? 'font-medium shadow-sm bg-white/40 dark:bg-gray-800/70 opacity-100 ' +
                                   'text-accent-light dark:text-accent-dark'
-                                : 'hover:bg-white/40 dark:hover:bg-gray-800/70 ' +
-                                  'opacity-70 text-surface-half-light dark:text-surface-half-dark')
+                                : 'font-normal shadow-none hover:bg-white/90 dark:hover:bg-gray-800/70 opacity-70 ' +
+                                  'text-surface-half-light dark:text-surface-half-dark')
                         }
                     >
                         {nav}

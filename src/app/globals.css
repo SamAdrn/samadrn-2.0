@@ -3,6 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+    --breakpoint-xs: 22rem;
+
     --color-primary-light: var(--color-stone-50);
     --color-primary-dark: var(--color-slate-950);
 
@@ -19,7 +21,7 @@
     --color-accent-half-dark: var(--color-sky-700);
 
     --color-sun-yellow: var(--color-amber-500);
-    --color-moon-blue: var(--color-violet-400);
+    --color-moon-blue: var(--color-sky-400);
 
     --font-sans: 'Inter', 'Inter Fallback';
     --font-mono: 'JetBrains Mono', 'JetBrains Mono Fallback';

@@ -48,13 +48,13 @@ export default function ThemeSwitcher() {
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
             className={
-                'relative cursor-pointer transition-colors duration-300 p-2 rounded-full border-2 ' +
+                'relative cursor-pointer transition-colors duration-300 p-2 rounded-full border-1 md:border-2 ' +
                 'border-surface-light dark:border-surface-dark hover:bg-primary-dark hover:dark:bg-primary-light'
             }
             aria-label={darkMode ? 'Toggle light mode' : 'Toggle dark mode'}
         >
             {/* Width and height of the container div should match the width and height of the svg */}
-            <div className="relative w-3.5 h-3.5 md:w-6 md:h-6">
+            <div className="relative w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 md:w-6 md:h-6">
                 <AnimatePresence mode="wait" initial={false}>
                     {darkMode ? (
                         <motion.svg
