@@ -1,10 +1,17 @@
 'use client';
 
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-/** Navbar component. */
-export default function NavbarContainer() {
+/**
+ * Header Container Component.
+ *
+ * This component appears on device widths narrower than 64rem. When scrolled,
+ * the header displays a blur backdrop to ensure content placed on it will
+ * still be visible.
+ */
+export default function HeaderContainer() {
+    const { t } = useTranslation();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -37,21 +44,20 @@ export default function NavbarContainer() {
     }
 
     return (
-        <header>
-            <nav
-                className={
-                    'fixed bg-transparent top-0 left-0 right-0 z-50 px-5 md:px-20 flex justify-between items-center h-[var(--navbar-height)] transition-all duration-300 ' +
-                    (isScrolled
-                        ? 'backdrop-blur-sm bg-white/50 dark:bg-gray-900/10 shadow-xs'
-                        : 'bg-transparent')
-                }
+        <header
+            className={
+                'fixed bg-transparent top-0 left-0 right-0 z-50 px-5 md:px-20 flex justify-start items-center h-[var(--navbar-height)] transition-all duration-300 ' +
+                (isScrolled
+                    ? 'backdrop-blur-sm bg-white/50 dark:bg-gray-900/10 shadow-xs'
+                    : 'bg-transparent')
+            }
+        >
+            <a
+                href="#"
+                className="md:pt-1 text-xl lg:text-2xl font-semibold font-mono uppercase"
             >
-                <div className="flex items-center justify-between">
-                    <Link href="#" className="md:pt-1 text-xl lg:text-2xl font-semibold font-mono">
-                        SAMUEL KOSASIH
-                    </Link>
-                </div>
-            </nav>
+                {t('STR_HERO.NAME')}
+            </a>
         </header>
     );
 }

@@ -4,7 +4,7 @@ import { Inter, JetBrains_Mono, Montserrat } from 'next/font/google';
 import './globals.css';
 
 import { CustomCursor, SplashScreen } from './components/global';
-import Navbar from './components/navbar';
+import { HeaderContainer } from './components/shared';
 
 import { AuroraGlowBackground } from './lib/backgrounds';
 import {
@@ -58,7 +58,7 @@ export default function RootLayout({
                         <ModalProvider>
                             {/* <SplashScreen /> */}
 
-                            <Navbar />
+                            <HeaderContainer />
 
                             {/* Main Content */}
                             <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30 xl:mx-40">
