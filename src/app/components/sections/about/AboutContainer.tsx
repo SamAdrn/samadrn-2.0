@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { SectionContainer, Subheader } from '../../shared';
-import { Lang, pathToIcon, stack } from '@/app/lib/utils/Constants';
+import { Lang, pathToTechIcon, stack } from '@/app/lib/utils/Constants';
 
 interface TechIconProps {
     lang: Lang;
@@ -18,6 +18,7 @@ export default function AboutContainer() {
         { category: t('STR_ABOUT.TECH.EXPERIENCED'), langs: stack.exp },
     ];
 
+    /** Wrapper component for Technology Icons to show in the Tech Stack */
     const TechIcon = ({ lang }: TechIconProps) => {
         return (
             <>
@@ -30,15 +31,15 @@ export default function AboutContainer() {
                         scale: 1.1,
                         transition: { type: 'spring', duration: 0.3 },
                     }}
-                    src={`${pathToIcon}/${lang.iconFile}.svg`}
+                    src={`${pathToTechIcon}/${lang.iconFile}.svg`}
                     alt={t('STR_ABOUT.TECH.ARIA.ICON_ALT', {
                         iconName: lang.name,
                     })}
-                    aria-describedby={`img-description-${lang.iconFile}`}
+                    aria-describedby={`tech-icon-${lang.iconFile}-description`}
                 />
                 {/* SR for Icon Images */}
                 <span
-                    id={`img-description-${lang.iconFile}`}
+                    id={`tech-icon-${lang.iconFile}-description`}
                     className="sr-only"
                 >
                     {t('STR_ABOUT.TECH.ARIA.ICON_SR', { iconName: lang.name })}
