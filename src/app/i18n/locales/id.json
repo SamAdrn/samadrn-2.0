@@ -79,6 +79,35 @@
             }
         }
     },
+    "STR_PROJECT": {
+        "TITLE": "Projects",
+        "ITEM": {
+            "POCKET_GARAGE": {
+                "DATE": "July 2023",
+                "DESCRIPTION": "Cross-Platform Automobile Data Application to search for vehicle specifications"
+            },
+            "UNITY": {
+                "DATE": "August 2023",
+                "DESCRIPTION": "Lifestyle iOS Application that gamifies walking & exploring your surroundings"
+            },
+            "TESTUDO_REVAMPED": {
+                "DATE": "December 2022",
+                "DESCRIPTION": "Revamped class schedule system servicing students of the University of Maryland"
+            },
+            "MAZE": {
+                "DATE": "June 2022",
+                "DESCRIPTION": "Terminal game to comprehend the concept of graphs and traversal algorithms"
+            },
+            "CARAOKE": {
+                "DATE": "April 2022",
+                "DESCRIPTION": "Carpool-Karaoke-Inspired Hackathon Project utilizing Spotify API"
+            },
+            "ARIA": {
+                "THUMB_ALT": "{{projectName}} Thumbnail",
+                "THUMB_SR": "Thumbnail for {{projectName}}"
+            }
+        }
+    },
     "STR_MISC": {
         "ACTION": {
             "VIEW_RESUME": "View My Resume"

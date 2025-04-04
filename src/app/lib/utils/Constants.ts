@@ -1,5 +1,3 @@
-import { useTranslation } from 'react-i18next';
-
 export type Social = 'github' | 'linkedin' | 'spotify';
 export type Lang = { name: string; iconFile: string };
 export type Experience = {
@@ -12,6 +10,14 @@ export type Experience = {
     pointKeys: string[];
     categories: string[];
     link: string;
+};
+export type Project = {
+    title: string;
+    folder: string;
+    dateKey: string;
+    descriptionKey: string;
+    categories: string[];
+    link?: { type: 'Devpost' | 'Github'; href: string };
 };
 
 /** A map of all social media links and pertinent information */
@@ -36,8 +42,8 @@ export const socials: Record<
     },
 };
 
-/** A constant that holds the relative path to the folder that contains all icons */
-export const pathToIcon = '/icons';
+/** A constant that holds the relative path to the folder that contains all tech icons */
+export const pathToTechIcon = '/icons';
 
 /** A map of tech stack names and paths to their icon images */
 export const stack: Record<'core' | 'exp', Lang[]> = {
@@ -62,6 +68,7 @@ export const stack: Record<'core' | 'exp', Lang[]> = {
     ],
 };
 
+/** A prefix to access all the corresponding translation keys */
 const [inovalon, iigf, terrapinTech, bachelors, associates] = [
     'INOVALON',
     'IIGF',
@@ -142,5 +149,76 @@ export const experiences: Experience[] = [
         pointKeys: [`${associates}.POINT_1`, `${associates}.POINT_2`],
         categories: ['Academic', 'Community College'],
         link: 'https://www.edmonds.edu/',
+    },
+];
+
+/** A constant that holds the relative path to the folder that contains all project thumbnails */
+export const pathToProjectThumbnail = '/projects';
+
+/** A prefix to access all the corresponding translation keys */
+const [pocketGarage, unity, testudoRevamped, maze, caraoke] = [
+    'POCKET_GARAGE',
+    'UNITY',
+    'TESTUDO_REVAMPED',
+    'MAZE',
+    'CARAOKE',
+].map((e) => `STR_PROJECT.ITEM.${e}`);
+
+/** A list of projects along with the keys used for translations for some properties */
+export const projects: Project[] = [
+    {
+        title: 'Pocket Garage',
+        folder: 'pocket-garage',
+        dateKey: `${pocketGarage}.DATE`,
+        descriptionKey: `${pocketGarage}.DESCRIPTION`,
+        categories: ['React Native', 'Firebase'],
+        link: {
+            type: 'Github',
+            href: 'https://github.com/SamAdrn/PocketGarage',
+        },
+    },
+    {
+        title: 'Unity',
+        folder: 'unity',
+        dateKey: `${unity}.DATE`,
+        descriptionKey: `${unity}.DESCRIPTION`,
+        categories: ['Swift', 'Academic'],
+        link: {
+            type: 'Github',
+            href: 'https://github.com/SamAdrn/Unity',
+        },
+    },
+    {
+        title: 'Testudo Revamped',
+        folder: 'testudo-revamped',
+        dateKey: `${testudoRevamped}.DATE`,
+        descriptionKey: `${testudoRevamped}.DESCRIPTION`,
+        categories: ['HTML + EJS', 'jQuery', 'MongoDB'],
+        link: {
+            type: 'Github',
+            href: 'https://github.com/SamAdrn/Testudo-Revamp',
+        },
+    },
+    {
+        title: 'Maze',
+        folder: 'maze',
+        dateKey: `${maze}.DATE`,
+        descriptionKey: `${maze}.DESCRIPTION`,
+        categories: ['Ruby'],
+        link: {
+            type: 'Github',
+            href: 'https://github.com/SamAdrn/Maze',
+        },
+    },
+    {
+        title: 'Caraoke',
+        folder: 'caraoke',
+        dateKey: `${caraoke}.DATE`,
+        descriptionKey: `${caraoke}.DESCRIPTION`,
+        categories: ['Arduino', 'Python', 'Spotify API'],
+        link: {
+            type: 'Devpost',
+            href: 'https://devpost.com/software/caraoke-lyrics-on-the-go?',
+        },
     },
 ];
