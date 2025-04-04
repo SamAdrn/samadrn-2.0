@@ -3,12 +3,12 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
+import NavigationBar from './NavigationBar';
 import SocialBar from './SocialBar';
 import { LinkButton } from '../../shared';
 
 import { useSplashAnimation } from '@/app/lib/contexts';
 import { entryContainer, fadeInFromLeft } from '@/app/lib/utils';
-import NavigationBar from './NavigationBar';
 
 /** The Hero Section Component. Should appear at the top of the page. */
 export default function HeroContainer() {

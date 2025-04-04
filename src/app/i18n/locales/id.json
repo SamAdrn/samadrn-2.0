@@ -7,6 +7,26 @@
             "2": "Exploring Back-End."
         }
     },
+    "STR_ABOUT": {
+        "TITLE": "About Me",
+        "TECH": {
+            "CORE": "Core Technologies",
+            "EXPERIENCED": "Experienced With",
+            "ARIA": {
+                "ICON_ALT": "{{iconName}} Icon",
+                "ICON_SR": "Icon for {{iconName}}"
+            }
+        },
+        "PERSONAL": {
+            "PART_1": "An enthusiastic",
+            "PART_2": "Software Engineer",
+            "PART_3": "with a passion for creating innovative solutions. Born and raised in the vibrant city of",
+            "PART_4": "Jakarta, Indonesia,",
+            "PART_5": "I witnessed firsthand how technology can transform communities and everyday life. These observations inspired me to pursue a Bachelor's degree in the United States, to someday make my own",
+            "PART_6": "meaningful impact",
+            "PART_7": "through software."
+        }
+    },
     "STR_MISC": {
         "ACTION": {
             "VIEW_RESUME": "View My Resume"

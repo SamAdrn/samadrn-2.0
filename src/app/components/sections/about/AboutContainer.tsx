@@ -1,58 +1,55 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { SectionContainer, Subheader } from '../../shared';
+import { Lang, pathToIcon, stack } from '@/app/lib/utils/Constants';
 
 interface TechIconProps {
-    icon: string;
+    lang: Lang;
 }
 
 /** The About Section Component.*/
 export default function AboutContainer() {
-    const coreLangs = [
-        'typescript',
-        'angular',
-        'tailwind',
-        'python',
-        'html',
-        'css',
-        'git',
-    ];
-
-    const expLangs = [
-        'ruby',
-        'racket',
-        'ansic',
-        'java',
-        'postgresql',
-        'react',
-        'swift',
-        'nextjs',
-    ];
+    const { t } = useTranslation();
 
     const techStack = [
-        { category: 'Core Technologies', langs: coreLangs },
-        { category: 'Experienced With', langs: expLangs },
+        { category: t('STR_ABOUT.TECH.CORE'), langs: stack.core },
+        { category: t('STR_ABOUT.TECH.EXPERIENCED'), langs: stack.exp },
     ];
 
-    const TechIcon = ({ icon }: TechIconProps) => {
+    const TechIcon = ({ lang }: TechIconProps) => {
         return (
-            <motion.img
-                key={icon}
-                className="h-8 drop-shadow-sm duration-400 transition-opacity opacity-80"
-                whileHover={{
-                    scale: 1.1,
-                    transition: { type: 'spring', duration: 0.3 },
-                }}
-                src={`/icons/${icon}.svg`}
-                alt={`${icon} Icon`}
-            />
+            <>
+                {/* Icon Images */}
+                <motion.img
+                    id={`tech-icon-${lang.iconFile}`}
+                    key={lang.iconFile}
+                    className="h-8 drop-shadow-sm duration-400 transition-opacity opacity-80"
+                    whileHover={{
+                        scale: 1.1,
+                        transition: { type: 'spring', duration: 0.3 },
+                    }}
+                    src={`${pathToIcon}/${lang.iconFile}.svg`}
+                    alt={t('STR_ABOUT.TECH.ARIA.ICON_ALT', {
+                        iconName: lang.name,
+                    })}
+                    aria-describedby={`img-description-${lang.iconFile}`}
+                />
+                {/* SR for Icon Images */}
+                <span
+                    id={`img-description-${lang.iconFile}`}
+                    className="sr-only"
+                >
+                    {t('STR_ABOUT.TECH.ARIA.ICON_SR', { iconName: lang.name })}
+                </span>
+            </>
         );
     };
 
     return (
         <SectionContainer id="about">
-            <Subheader text="About Me" />
+            <Subheader text={t('STR_ABOUT.TITLE')} />
 
             <div
                 className={
@@ -64,23 +61,19 @@ export default function AboutContainer() {
                         'text-justify leading-6 text-surface-half-light dark:text-surface-half-dark transition-colors '
                     }
                 >
-                    An enthusiastic{' '}
+                    {t('STR_ABOUT.PERSONAL.PART_1')}{' '}
                     <span className="text-surface-light dark:text-surface-dark">
-                        Software Engineer
+                        {t('STR_ABOUT.PERSONAL.PART_2')}
                     </span>{' '}
-                    with a passion for creating innovative solutions. Born and
-                    raised in the vibrant city of{' '}
+                    {t('STR_ABOUT.PERSONAL.PART_3')}{' '}
                     <span className="text-surface-light dark:text-surface-dark">
-                        Jakarta, Indonesia,
+                        {t('STR_ABOUT.PERSONAL.PART_4')}
                     </span>{' '}
-                    I witnessed firsthand how technology can transform
-                    communities and everyday life. These observations inspired
-                    me to pursue a Bachelor's degree in the United States, to
-                    someday make my own{' '}
+                    {t('STR_ABOUT.PERSONAL.PART_5')}{' '}
                     <span className="text-surface-light dark:text-surface-dark">
-                        meaningful impact
+                        {t('STR_ABOUT.PERSONAL.PART_6')}
                     </span>{' '}
-                    through software.
+                    {t('STR_ABOUT.PERSONAL.PART_7')}
                 </p>
             </div>
 
@@ -107,7 +100,7 @@ export default function AboutContainer() {
                     <div>
                         <div className=" grid grid-cols-5 md:grid-cols-8 gap-y-5 place-items-center">
                             {stack.langs.map((lang) => (
-                                <TechIcon icon={lang} key={lang} />
+                                <TechIcon lang={lang} key={lang.iconFile} />
                             ))}
                         </div>
                     </div>
