@@ -8,6 +8,7 @@ import SocialBar from './SocialBar';
 
 import { useSplashAnimation } from '@/app/lib/contexts';
 import { entryContainer, fadeInFromLeft } from '@/app/lib/utils';
+import { pathToResume } from '@/app/lib/utils/Constants';
 
 /** The Hero Section Component. Should appear at the top of the page. */
 export default function HeroContainer() {
@@ -58,7 +59,16 @@ export default function HeroContainer() {
                 </span>
 
                 {/* Footnote Resume Link */}
-                <a className="select-none cursor-pointer inline-flex items-center group opacity-70 hover:opacity-100">
+                <a
+                    id="view-resume-link"
+                    href={pathToResume}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label={t('STR_MISC.NAVIGATION.ARIA.OPENS_NEW_TAB', {
+                        target: 'Resume',
+                    })}
+                    className="select-none cursor-pointer inline-flex items-center group opacity-70 hover:opacity-100"
+                >
                     {/* Button Label */}
                     <span
                         className={

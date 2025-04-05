@@ -20,6 +20,9 @@ export type Project = {
     link?: { type: 'Devpost' | 'Github'; href: string };
 };
 
+/** Path to the stored resume file */
+export const pathToResume = "Samuel_Kosasih_Resume.pdf";
+
 /** A map of all social media links and pertinent information */
 export const socials: Record<
     Social,

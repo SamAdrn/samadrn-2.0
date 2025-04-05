@@ -1,6 +1,10 @@
 'use client';
 
-import { pathToProjectThumbnail, projects } from '@/app/lib/utils/Constants';
+import {
+    pathToProjectThumbnail,
+    projects,
+    socials,
+} from '@/app/lib/utils/Constants';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Chip, SectionContainer, Subheader } from '../../shared';
@@ -94,7 +98,7 @@ export default function ProjectContainer() {
                                     {/* Category chips */}
                                     <div className="flex gap-2 mt-3 items-center">
                                         {/* Chips */}
-                                        {item.categories.map((category, i) => (
+                                        {categories.map((category, i) => (
                                             <Chip key={i} text={category} />
                                         ))}
 
@@ -150,7 +154,18 @@ export default function ProjectContainer() {
             </ul>
 
             <div className="mt-10 lg:mt-14">
-                <a className="select-none cursor-pointer flex items-center group opacity-70 hover:opacity-100">
+                {/* View GitHub Link */}
+                <a
+                    id="view-github-link"
+                    href={socials.github.link}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label={t('STR_MISC.NAVIGATION.ARIA.OPENS_NEW_TAB', {
+                        target: socials.github.label,
+                    })}
+                    className="select-none cursor-pointer flex items-center group opacity-70 hover:opacity-100"
+                >
+                    {/* Horizontal Line */}
                     <span
                         className={
                             'hidden lg:inline h-[2px] w-20 ms-1 me-4 bg-surface-half-light/70 dark:bg-surface-half-dark ' +
@@ -158,6 +173,7 @@ export default function ProjectContainer() {
                         }
                     ></span>
 
+                    {/* Button Label */}
                     <span
                         className={
                             'transition-colors text-surface-half-light dark:text-surface-half-dark ' +

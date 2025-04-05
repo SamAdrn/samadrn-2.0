@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { useSplashAnimation } from '@/app/lib/contexts';
-import { entryContainer, fadeInFromLeft, socials } from '@/app/lib/utils';
+import { entryContainer, fadeInFromLeft } from '@/app/lib/utils';
+import { socials } from '@/app/lib/utils/Constants';
 import { useTranslation } from 'react-i18next';
 
 /** A bar containing links to various social media pages */
