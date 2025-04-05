@@ -4,13 +4,16 @@ import { LanguageOption } from '@/app/i18n';
 import { useLanguage, useSplashAnimation } from '@/app/lib/contexts';
 import { fadeInFromLeft } from '@/app/lib/utils';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 interface LanguageButton {
     label: string;
     lang: LanguageOption;
 }
 
+/** Container to hold language switches */
 export default function LanguageSwitcher() {
+    const { t } = useTranslation();
     const { splashComplete } = useSplashAnimation();
     const { language, changeLanguage } = useLanguage();
 
@@ -27,6 +30,7 @@ export default function LanguageSwitcher() {
 
     return (
         <motion.div
+            id="language-switcher"
             variants={fadeInFromLeft}
             initial="hidden"
             animate={splashComplete ? 'visibleDelay' : 'hidden'}
@@ -34,6 +38,7 @@ export default function LanguageSwitcher() {
         >
             {langs.map((langType) => (
                 <button
+                    id={`language-switcher-${langType.label}-btn`}
                     key={langType.lang}
                     onClick={() => changeLanguage(langType.lang)}
                     className={
@@ -42,6 +47,9 @@ export default function LanguageSwitcher() {
                             ? 'text-surface-light dark:text-surface-dark'
                             : 'hover:backdrop-blur-sm text-surface-half-light/80 dark:text-surface-half-dark/80 hover:bg-white/50 dark:hover:bg-gray-700/50')
                     }
+                    aria-label={t('STR_MISC.LANGUAGE.SET_LANG', {
+                        lang: langType.label,
+                    })}
                 >
                     {langType.label}
                 </button>

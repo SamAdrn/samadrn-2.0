@@ -4,7 +4,7 @@ interface SubheaderProps {
     text: string;
 }
 
-/** A bordered pill-shaped container for subheader text */
+/** A formatted text prefixed with a horizontal line as a Subheader */
 export default function Subheader({ text }: SubheaderProps) {
     return (
         <div className="flex items-center mb-7">

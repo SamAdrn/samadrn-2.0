@@ -53,6 +53,7 @@ export default function HeaderContainer() {
             }
         >
             <a
+                id="header-name"
                 href="#"
                 className="md:pt-1 text-xl lg:text-2xl font-semibold font-mono uppercase"
             >

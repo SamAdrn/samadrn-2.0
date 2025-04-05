@@ -46,6 +46,7 @@ export default function ThemeSwitcher() {
 
     return (
         <motion.button
+            id="theme-switcher"
             onClick={toggleDarkMode}
             variants={fadeInFromLeft}
             initial="hidden"
@@ -58,12 +59,12 @@ export default function ThemeSwitcher() {
             }
             aria-label={darkMode ? toggleLightText : toggleDarkText}
         >
-
             {/* Width and height of the container div should match the width and height of the svg */}
             <div className="relative w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 md:w-6 md:h-6">
                 <AnimatePresence mode="wait" initial={false}>
                     {darkMode ? (
                         <motion.svg
+                            id="theme-switcher-sun-svg"
                             key="sun"
                             initial={{ rotate: 90, opacity: 0 }}
                             animate={{ rotate: 0, opacity: 1 }}
@@ -91,6 +92,7 @@ export default function ThemeSwitcher() {
                         </motion.svg>
                     ) : (
                         <motion.svg
+                            id="theme-switcher-moon-svg"
                             key="moon"
                             initial={{ rotate: -90, opacity: 0 }}
                             animate={{ rotate: 0, opacity: 1 }}

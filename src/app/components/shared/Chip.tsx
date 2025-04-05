@@ -4,6 +4,7 @@ interface ChipProps {
     text: string;
 }
 
+/** A pill-style container for text */
 export default function Chip({ text }: ChipProps) {
     return (
         <div

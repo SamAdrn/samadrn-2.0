@@ -113,6 +113,9 @@
             "VIEW_RESUME": "View My Resume",
             "VIEW_GITHUB": "View my GitHub Page"
         },
+        "LANGUAGE": {
+            "SET_LANG": "Set to {{lang}}"
+        },
         "THEME": {
             "TOGGLE_LIGHT": "Toggle Light Mode",
             "TOGGLE_DARK": "Toggle Dark Mode"
