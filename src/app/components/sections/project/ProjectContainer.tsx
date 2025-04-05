@@ -150,7 +150,7 @@ export default function ProjectContainer() {
             </ul>
 
             <div className="mt-10 lg:mt-14">
-                <button className="select-none cursor-pointer flex items-center group opacity-70 hover:opacity-100">
+                <a className="select-none cursor-pointer flex items-center group opacity-70 hover:opacity-100">
                     <span
                         className={
                             'hidden lg:inline h-[2px] w-20 ms-1 me-4 bg-surface-half-light/70 dark:bg-surface-half-dark ' +
@@ -164,7 +164,7 @@ export default function ProjectContainer() {
                             'group-hover:text-accent-light group-hover:dark:text-accent-dark'
                         }
                     >
-                        View my GitHub Page
+                        {t('STR_MISC.ACTION.VIEW_GITHUB')}
                     </span>
 
                     {/* TR Arrow */}
@@ -187,7 +187,7 @@ export default function ProjectContainer() {
                             d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
                         />
                     </svg>
-                </button>
+                </a>
             </div>
         </SectionContainer>
     );

@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 
 import NavigationBar from './NavigationBar';
 import SocialBar from './SocialBar';
-import { LinkButton } from '../../shared';
 
 import { useSplashAnimation } from '@/app/lib/contexts';
 import { entryContainer, fadeInFromLeft } from '@/app/lib/utils';
@@ -50,6 +49,7 @@ export default function HeroContainer() {
                 variants={fadeInFromLeft}
                 className="mx-10 md:mx-0"
             >
+                {/* Footnote Text */}
                 <span className="me-2 text-surface-half-light dark:text-surface-half-dark">
                     {t('STR_HERO.FOOTNOTE.1')}{' '}
                     <span className="hidden md:inline">
@@ -57,10 +57,39 @@ export default function HeroContainer() {
                     </span>
                 </span>
 
-                <LinkButton
-                    id="hero-view-resume-btn"
-                    label={t('STR_MISC.ACTION.VIEW_RESUME')}
-                />
+                {/* Footnote Resume Link */}
+                <a className="select-none cursor-pointer inline-flex items-center group opacity-70 hover:opacity-100">
+                    {/* Button Label */}
+                    <span
+                        className={
+                            'transition-colors text-surface-half-light dark:text-surface-half-dark ' +
+                            'group-hover:text-accent-light group-hover:dark:text-accent-dark'
+                        }
+                    >
+                        {t('STR_MISC.ACTION.VIEW_RESUME')}
+                    </span>
+
+                    {/* TR Arrow */}
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.7}
+                        stroke="currentColor"
+                        className={
+                            'size-4 inline mb-0.5 ms-2 transition-all transform ' +
+                            'text-surface-half-light dark:text-surface-half-dark ' +
+                            'group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ' +
+                            'group-hover:text-accent-light/80 group-hover:dark:text-accent-dark/80'
+                        }
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                        />
+                    </svg>
+                </a>
             </motion.div>
 
             <div className="mt-5 w-full">

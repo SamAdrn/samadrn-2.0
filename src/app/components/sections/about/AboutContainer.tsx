@@ -35,6 +35,7 @@ export default function AboutContainer() {
                     alt={t('STR_ABOUT.TECH.ARIA.ICON_ALT', {
                         iconName: lang.name,
                     })}
+                    title={lang.name}
                     aria-describedby={`tech-icon-${lang.iconFile}-description`}
                 />
                 {/* SR for Icon Images */}

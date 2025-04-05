@@ -38,7 +38,7 @@
                 "END": "",
                 "LOCATION": "Bowie, MD",
                 "POINT_1": "Leveraged Angular to design and develop a wizard-style data-entry application to streamline customer onboarding processes from multiple weeks to a few hours",
-                "POINT_2": "Developed a script to map metadata properties from Swagger documentation using schemas from various REST endpoints",
+                "POINT_2": "Developed a script to map metadata from Swagger documentation using schemas from REST endpoints",
                 "POINT_3": "Created schematics that output various types of Angular pages of an internal admin tool managing enterprise customer accounts"
             },
             "IIGF": {
@@ -56,7 +56,7 @@
                 "START": "November 2021",
                 "END": "May 2024",
                 "LOCATION": "College Park, MD",
-                "POINT_1": "Assist members of the University of Maryland community in troubleshooting various software issues",
+                "POINT_1": "Led a team of technicians with a mission to serve the UMD community by resolving technology challenges through step-by-step guidance and problem-solving skills, maintaining high quality customer service standards",
                 "POINT_2": "Mentored team members on store procedures, prioritizing their well‑being and safety in a customer‑facing role"
             },
             "BACHELORS": {
@@ -65,7 +65,7 @@
                 "START": "August 2021",
                 "END": "May 2024",
                 "LOCATION": "College Park, MD",
-                "POINT_1": "Earned my Bachelor's of Science (A.S.) in Computer Science",
+                "POINT_1": "Earned my Bachelor's of Science (B.S.) in Computer Science",
                 "POINT_2": "Part of the Dean's List: Fall 2022, Spring 2023, Fall 2023, Spring 2024"
             },
             "ASSOCIATES": {
@@ -74,7 +74,7 @@
                 "START": "September 2019",
                 "END": "June 2021",
                 "LOCATION": "Lynnwood, WA",
-                "POINT_1": "Earned my Associate's of Science (B.S.) in Computer Science",
+                "POINT_1": "Earned my Associate's of Science (A.S.) in Computer Science",
                 "POINT_2": "Earned a High School Diploma while taking college courses"
             }
         }
@@ -87,7 +87,7 @@
                 "DESCRIPTION": "Cross-Platform Automobile Data Application to search for vehicle specifications"
             },
             "UNITY": {
-                "DATE": "August 2023",
+                "DATE": "May 2023",
                 "DESCRIPTION": "Lifestyle iOS Application that gamifies walking & exploring your surroundings"
             },
             "TESTUDO_REVAMPED": {
@@ -110,7 +110,8 @@
     },
     "STR_MISC": {
         "ACTION": {
-            "VIEW_RESUME": "View My Resume"
+            "VIEW_RESUME": "View My Resume",
+            "VIEW_GITHUB": "View my GitHub Page"
         },
         "NAVIGATION": {
             "ABOUT": "About",

@@ -65,7 +65,7 @@
                 "START": "August 2021",
                 "END": "May 2024",
                 "LOCATION": "College Park, MD",
-                "POINT_1": "Earned my Bachelor's of Science (A.S.) in Computer Science",
+                "POINT_1": "Earned my Bachelor's of Science (B.S.) in Computer Science",
                 "POINT_2": "Part of the Dean's List: Fall 2022, Spring 2023, Fall 2023, Spring 2024"
             },
             "ASSOCIATES": {
@@ -74,7 +74,7 @@
                 "START": "September 2019",
                 "END": "June 2021",
                 "LOCATION": "Lynnwood, WA",
-                "POINT_1": "Earned my Associate's of Science (B.S.) in Computer Science",
+                "POINT_1": "Earned my Associate's of Science (A.S.) in Computer Science",
                 "POINT_2": "Earned a High School Diploma while taking college courses"
             }
         }
@@ -87,7 +87,7 @@
                 "DESCRIPTION": "Cross-Platform Automobile Data Application to search for vehicle specifications"
             },
             "UNITY": {
-                "DATE": "August 2023",
+                "DATE": "May 2023",
                 "DESCRIPTION": "Lifestyle iOS Application that gamifies walking & exploring your surroundings"
             },
             "TESTUDO_REVAMPED": {
@@ -110,7 +110,8 @@
     },
     "STR_MISC": {
         "ACTION": {
-            "VIEW_RESUME": "View My Resume"
+            "VIEW_RESUME": "View My Resume",
+            "VIEW_GITHUB": "View my GitHub Page"
         },
         "NAVIGATION": {
             "ABOUT": "About",
