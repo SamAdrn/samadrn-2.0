@@ -113,6 +113,10 @@
             "VIEW_RESUME": "View My Resume",
             "VIEW_GITHUB": "View my GitHub Page"
         },
+        "THEME": {
+            "TOGGLE_LIGHT": "Toggle Light Mode",
+            "TOGGLE_DARK": "Toggle Dark Mode"
+        },
         "NAVIGATION": {
             "ABOUT": "About",
             "EXPERIENCES": "Experiences",
