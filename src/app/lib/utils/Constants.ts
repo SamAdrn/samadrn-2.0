@@ -55,6 +55,7 @@ export const stack: Record<'core' | 'exp', Lang[]> = {
         { name: 'HTML', iconFile: 'html' },
         { name: 'CSS', iconFile: 'css' },
         { name: 'Git', iconFile: 'git' },
+        { name: 'Playwright', iconFile: 'playwright' },
     ],
     exp: [
         { name: 'Ruby', iconFile: 'ruby' },
@@ -97,6 +98,7 @@ export const experiences: Experience[] = [
             'HTML + SCSS',
             'PrimeNG',
             'Python',
+            'Playwright'
         ],
         link: 'https://www.inovalon.com/',
     },
