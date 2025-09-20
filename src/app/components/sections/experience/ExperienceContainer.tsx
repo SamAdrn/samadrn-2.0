@@ -78,9 +78,9 @@ export default function ExperienceContainer() {
                                     <span>—</span>
                                     <span
                                         className={
-                                            'rounded-md px-2 py-0.5 ' +
-                                            (end === '' &&
-                                                'bg-accent-half-light/20 dark:bg-accent-half-dark/30 text-accent-light dark:text-accent-dark')
+                                            end === ''
+                                                ? 'rounded-md px-2 py-0.5 bg-accent-half-light/20 dark:bg-accent-half-dark/30 text-accent-light dark:text-accent-dark'
+                                                : ''
                                         }
                                     >
                                         {end || t('STR_EXPERIENCE.PRESENT')}
