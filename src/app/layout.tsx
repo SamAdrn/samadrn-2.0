@@ -34,8 +34,36 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-    title: 'Samuel Kosasih',
+    title: 'Samuel Kosasih | Software Engineer',
     description: 'Personal Website',
+
+    keywords: ['Samuel Kosasih', 'Software Engineer'],
+
+    authors: [{ name: 'Samuel Kosasih' }],
+    creator: 'Samuel Kosasih',
+
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: 'https://samadrn.com',
+        siteName: 'Samuel Kosasih',
+        description: 'Building efficient software solutions with clean code',
+        images: [
+            {
+                url: '/meta/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Samuel Kosasih - Software Engineer',
+            },
+        ],
+    },
+
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Samuel Kosasih | Software Engineer',
+        description: 'Building efficient software solutions with clean code',
+        images: ['/meta/og-image.png'],
+    },
 };
 
 export default function RootLayout({
@@ -56,7 +84,7 @@ export default function RootLayout({
                 <LanguageProvider>
                     <SplashAnimationProvider>
                         <ModalProvider>
-                            {/* <SplashScreen /> */}
+                            <SplashScreen />
 
                             <HeaderContainer />
 
