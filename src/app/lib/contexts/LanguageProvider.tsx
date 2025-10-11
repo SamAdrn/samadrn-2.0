@@ -1,8 +1,8 @@
 'use client';
 
+import i18n from '@/app/i18n';
 import { LanguageOption } from '@/app/i18n';
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 
 type LanguageContextType = {
     language: string;
@@ -18,7 +18,6 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-    const { i18n } = useTranslation();
     const [language, setLanguage] = useState(i18n.language || 'en');
 
     const changeLanguage = (lang: LanguageOption) => {

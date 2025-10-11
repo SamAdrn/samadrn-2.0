@@ -9,21 +9,23 @@ import idTranslations from './locales/id.json';
 
 export type LanguageOption = 'en' | 'id';
 
-i18n.use(LanguageDetector)
-    .use(initReactI18next)
-    .init({
-        resources: {
-            en: {
-                translation: enTranslations,
+if (!i18n.isInitialized) {
+    i18n.use(LanguageDetector)
+        .use(initReactI18next)
+        .init({
+            resources: {
+                en: {
+                    translation: enTranslations,
+                },
+                id: {
+                    translation: idTranslations,
+                },
             },
-            id: {
-                translation: idTranslations,
+            fallbackLng: 'en', // Default language
+            interpolation: {
+                escapeValue: false, // React already escapes by default
             },
-        },
-        fallbackLng: 'en', // Default language
-        interpolation: {
-            escapeValue: false, // React already escapes by default
-        },
-    });
+        });
+}
 
 export default i18n;
