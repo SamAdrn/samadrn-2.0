@@ -21,7 +21,7 @@ export type Project = {
 };
 
 /** Path to the stored resume file */
-export const pathToResume = "Samuel_Kosasih_Resume.pdf";
+export const pathToResume = 'Samuel_Kosasih_Resume.pdf';
 
 /** A map of all social media links and pertinent information */
 export const socials: Record<
@@ -53,12 +53,10 @@ export const stack: Record<'core' | 'exp', Lang[]> = {
     core: [
         { name: 'TypeScript', iconFile: 'typescript' },
         { name: 'Angular', iconFile: 'angular' },
-        { name: 'Tailwind', iconFile: 'tailwind' },
         { name: 'Python', iconFile: 'python' },
-        { name: 'HTML', iconFile: 'html' },
-        { name: 'CSS', iconFile: 'css' },
         { name: 'Git', iconFile: 'git' },
         { name: 'Playwright', iconFile: 'playwright' },
+        { name: 'GraphQL', iconFile: 'graphql' },
     ],
     exp: [
         { name: 'Ruby', iconFile: 'ruby' },
@@ -100,8 +98,9 @@ export const experiences: Experience[] = [
             'TypeScript',
             'HTML + SCSS',
             'PrimeNG',
+            'GraphQL',
             'Python',
-            'Playwright'
+            'Playwright',
         ],
         link: 'https://www.inovalon.com/',
     },
