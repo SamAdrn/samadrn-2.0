@@ -60,22 +60,22 @@
                 "POINT_2": "Membimbing anggota tim mengenai prosedur toko, memprioritaskan kesejahteraan karyawan dalam peran yang berhadapan langsung dengan pelanggan"
             },
             "BACHELORS": {
-                "TITLE": "Pursuing my Bachelor's",
+                "TITLE": "Mengejar Gelar Sarjana",
                 "PLACE": "University of Maryland, College Park",
                 "START": "Agustus 2021",
                 "END": "Mei 2024",
                 "LOCATION": "College Park, Maryland, AS",
-                "POINT_1": "Earned my Bachelor's of Science (B.S.) in Computer Science",
-                "POINT_2": "Part of the Dean's List: Fall 2022, Spring 2023, Fall 2023, Spring 2024"
+                "POINT_1": "Memperoleh gelar Bachelor's of Science (B.S.) dalam Ilmu Komputer",
+                "POINT_2": "Bagian dari Dean's List: Fall 2022, Spring 2023, Fall 2023, Spring 2024"
             },
             "ASSOCIATES": {
-                "TITLE": "Pursuing my Associate's",
+                "TITLE": "Mengejar Gelar D3",
                 "PLACE": "Edmonds College",
                 "START": "September 2019",
                 "END": "Juni 2021",
                 "LOCATION": "Lynnwood, Washington, AS",
-                "POINT_1": "Earned my Associate's of Science (A.S.) in Computer Science",
-                "POINT_2": "Earned a High School Diploma while taking college courses"
+                "POINT_1": "Memperoleh gelar Associate's of Science (A.S.) dalam Ilmu Komputer",
+                "POINT_2": "Memperoleh Diploma SMA sambil mengambil kuliah"
             }
         }
     },
@@ -84,27 +84,27 @@
         "ITEM": {
             "POCKET_GARAGE": {
                 "DATE": "Juli 2023",
-                "DESCRIPTION": "Cross-Platform Automobile Data Application to search for vehicle specifications"
+                "DESCRIPTION": "Aplikasi Data Otomotif Cross-Platform untuk mencari spesifikasi kendaraan"
             },
             "UNITY": {
                 "DATE": "Mei 2023",
-                "DESCRIPTION": "Lifestyle iOS Application that gamifies walking & exploring your surroundings"
+                "DESCRIPTION": "Aplikasi Lifestyle iOS yang mengubah jalan-jalan & eksplorasi sekitar menjadi permainan"
             },
             "TESTUDO_REVAMPED": {
                 "DATE": "Desember 2022",
-                "DESCRIPTION": "Revamped class schedule system servicing students of the University of Maryland"
+                "DESCRIPTION": "Sistem jadwal kelas yang diperbarui untuk melayani mahasiswa University of Maryland"
             },
             "MAZE": {
                 "DATE": "Juni 2022",
-                "DESCRIPTION": "Terminal game to comprehend the concept of graphs and traversal algorithms"
+                "DESCRIPTION": "Permainan terminal untuk memahami konsep graf dan algoritma traversal"
             },
             "CARAOKE": {
                 "DATE": "April 2022",
-                "DESCRIPTION": "Carpool-Karaoke-Inspired Hackathon Project utilizing Spotify API"
+                "DESCRIPTION": "Proyek Hackathon Terinspirasi Carpool-Karaoke menggunakan Spotify API"
             },
             "ARIA": {
-                "THUMB_ALT": "{{projectName}} Thumbnail",
-                "THUMB_SR": "Thumbnail for {{projectName}}"
+                "THUMB_ALT": "Thumbnail {{projectName}}",
+                "THUMB_SR": "Thumbnail untuk {{projectName}}"
             }
         }
     },
@@ -114,20 +114,20 @@
             "VIEW_GITHUB": "Lihat Halaman GitHub"
         },
         "LANGUAGE": {
-            "SET_LANG": "Set to {{lang}}"
+            "SET_LANG": "Ubah ke {{lang}}"
         },
         "THEME": {
-            "TOGGLE_LIGHT": "Toggle Light Mode",
-            "TOGGLE_DARK": "Toggle Dark Mode"
+            "TOGGLE_LIGHT": "Ubah ke Mode Terang",
+            "TOGGLE_DARK": "Ubah ke Mode Gelap"
         },
         "NAVIGATION": {
             "ABOUT": "Tentang Saya",
             "EXPERIENCES": "Pengalaman",
             "PROJECTS": "Proyek",
             "ARIA": {
-                "CURRENT": "Currently in {{section}}",
-                "SCROLL_TO": "Scroll to {{section}}",
-                "OPENS_NEW_TAB": "{{target}} (opens in new tab)"
+                "CURRENT": "Saat ini di {{section}}",
+                "SCROLL_TO": "Gulir ke {{section}}",
+                "OPENS_NEW_TAB": "{{target}} (buka di tab baru)"
             }
         }
     }
