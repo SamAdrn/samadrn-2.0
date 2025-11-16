@@ -24,16 +24,24 @@ export default function HeroContainer() {
             className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-5"
         >
             {/* Name */}
-            <motion.span
+            <motion.a
                 id="hero-name"
+                href="#top"
+                onClick={(e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
                 variants={fadeInFromLeft}
                 className={
-                    'text-6xl font-title font-semibold leading-18 tracking-tight drop-shadow-md ' +
+                    'text-6xl font-title font-semibold leading-18 tracking-tight drop-shadow-md cursor-pointer ' +
                     'underline decoration-[0.5rem] underline-offset-8 decoration-amber-600/50 dark:decoration-sky-600/50'
                 }
+                aria-label={t('STR_MISC.NAVIGATION.ARIA.SCROLL_TO_TOP', {
+                    defaultValue: 'Scroll to top',
+                })}
             >
                 {t('STR_HERO.NAME')}
-            </motion.span>
+            </motion.a>
 
             {/* Subtitle */}
             <motion.span
