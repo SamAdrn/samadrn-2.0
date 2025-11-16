@@ -131,6 +131,7 @@
                 "CURRENT": "Saat ini di {{section}}",
                 "SCROLL_TO": "Gulir ke {{section}}",
                 "SCROLL_TO_TOP": "Gulir ke atas",
+                "SKIP_TO_CONTENT": "Langsung ke konten utama",
                 "OPENS_NEW_TAB": "{{target}} (buka di tab baru)"
             }
         }

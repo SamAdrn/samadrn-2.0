@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import About from './components/sections/about';
 import Experience from './components/sections/experience';
@@ -14,9 +15,24 @@ import { fadeInFromLeft } from './lib/utils/AnimationVariants';
 
 export default function Page() {
     const { splashComplete } = useSplashAnimation();
+    const { t } = useTranslation();
 
     return (
         <div className="lg:flex lg:justify-between lg:gap-20">
+            {/* Skip to main content link for keyboard accessibility */}
+            <a
+                href="#main-content"
+                className={
+                    'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] ' +
+                    'focus:px-4 focus:py-2 focus:rounded-md focus:shadow-md ' +
+                    'focus:bg-white focus:dark:bg-gray-800 ' +
+                    'focus:text-accent-light focus:dark:text-accent-dark ' +
+                    'focus:font-medium focus:transition-all ' +
+                    'focus:border-2 focus:border-accent-light focus:dark:border-accent-dark'
+                }
+            >
+                {t('STR_MISC.NAVIGATION.ARIA.SKIP_TO_CONTENT')}
+            </a>
             <div className="z-50 fixed top-5.5 md:top-4.5 right-5 md:right-18 block">
                 <ThemeSwitcher />
             </div>
@@ -32,6 +48,7 @@ export default function Page() {
 
             {/* Main Content */}
             <motion.main
+                id="main-content"
                 className="pt-24 lg:pt-0 lg:w-[55%]"
                 variants={fadeInFromLeft}
                 initial="hidden"
