@@ -25,22 +25,26 @@ export default function HeroContainer() {
             className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-5"
         >
             {/* Name */}
-            <motion.a
-                id="hero-name"
-                href="#top"
-                onClick={(e) => {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
+            <motion.h1
                 variants={fadeInFromLeft}
-                className={
-                    'text-6xl font-title font-semibold leading-18 tracking-tight drop-shadow-md cursor-pointer ' +
-                    'underline decoration-[0.5rem] underline-offset-8 decoration-amber-600/50 dark:decoration-sky-600/50'
-                }
-                aria-label={t('STR_MISC.NAVIGATION.ARIA.SCROLL_TO_TOP')}
+                className="m-0 p-0"
             >
-                {t('STR_HERO.NAME')}
-            </motion.a>
+                <a
+                    id="hero-name"
+                    href="#top"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className={
+                        'text-6xl font-title font-semibold leading-18 tracking-tight drop-shadow-md cursor-pointer ' +
+                        'underline decoration-[0.5rem] underline-offset-8 decoration-amber-600/50 dark:decoration-sky-600/50'
+                    }
+                    aria-label={t('STR_MISC.NAVIGATION.ARIA.SCROLL_TO_TOP')}
+                >
+                    {t('STR_HERO.NAME')}
+                </a>
+            </motion.h1>
 
             {/* Subtitle */}
             <motion.span
