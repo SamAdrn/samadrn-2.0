@@ -9,7 +9,6 @@ import { HeaderContainer } from './components/shared';
 import { AuroraGlowBackground } from './lib/backgrounds';
 import {
     LanguageProvider,
-    ModalProvider,
     SplashAnimationProvider,
 } from './lib/contexts';
 
@@ -148,19 +147,17 @@ export default function RootLayout({
                 />
                 <LanguageProvider>
                     <SplashAnimationProvider>
-                        <ModalProvider>
-                            <SplashScreen />
+                        <SplashScreen />
 
-                            <HeaderContainer />
+                        <HeaderContainer />
 
-                            {/* Main Content */}
-                            <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30 xl:mx-40">
-                                {children}
-                            </div>
+                        {/* Main Content */}
+                        <div className="relative min-h-screen mx-5 md:mx-20 lg:mx-30 xl:mx-40">
+                            {children}
+                        </div>
 
-                            {/* <CustomCursor /> */}
-                            <AuroraGlowBackground />
-                        </ModalProvider>
+                        {/* <CustomCursor /> */}
+                        <AuroraGlowBackground />
                     </SplashAnimationProvider>
                 </LanguageProvider>
             </body>
