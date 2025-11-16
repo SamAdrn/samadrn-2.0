@@ -25,6 +25,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
         setLanguage(lang);
     };
 
+    // Handle language changes through i18n
     useEffect(() => {
         const handleLanguageChanged = () => {
             setLanguage(i18n.language);
@@ -33,7 +34,12 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
         return () => {
             i18n.off('languageChanged', handleLanguageChanged);
         };
-    }, [i18n]);
+    }, [i18n]); // i18n is stable but included for exhaustive-deps
+
+    // Update HTML lang attribute when language changes for accessibility
+    useEffect(() => {
+        document.documentElement.lang = language;
+    }, [language]);
 
     return (
         <LanguageContext.Provider value={{ language, changeLanguage }}>
