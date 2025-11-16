@@ -45,13 +45,13 @@ function TypeScriptCode() {
                 <span className="transition-colors text-emerald-900 dark:text-green-500">
                     Passion
                 </span>{' '}
-                ={' '}
+                {'= '}
                 <span className="transition-colors text-amber-800 dark:text-amber-400">
-                    'Coding'
+                    &apos;Coding&apos;
                 </span>{' '}
-                |{' '}
+                {'| '}
                 <span className="transition-colors text-amber-800 dark:text-amber-400">
-                    'Problem Solving'
+                    &apos;Problem Solving&apos;
                 </span>
                 ;
             </div>
@@ -74,13 +74,13 @@ function TypeScriptCode() {
                 <span className="transition-colors text-slate-800 dark:text-sky-200">
                     basedIn
                 </span>
-                :{' '}
+                {': '}
                 <span className="transition-colors text-emerald-900 dark:text-green-500">
                     string
                 </span>{' '}
-                ={' '}
+                {'= '}
                 <span className="transition-colors text-amber-800 dark:text-amber-400">
-                    'Bowie, MD 🇺🇸'
+                    &apos;Bowie, MD 🇺🇸&apos;
                 </span>
                 ;
             </div>
@@ -97,7 +97,7 @@ function TypeScriptCode() {
                 <span className="transition-colors text-orange-800 dark:text-orange-400">
                     {'()'}
                 </span>
-                :{' '}
+                {': '}
                 <span className="transition-colors text-emerald-900 dark:text-green-500">
                     string
                 </span>{' '}
@@ -113,7 +113,7 @@ function TypeScriptCode() {
                     return
                 </span>{' '}
                 <span className="transition-colors text-amber-800 dark:text-amber-400">
-                    'Inovalon'
+                    &apos;Inovalon&apos;
                 </span>
                 ;
             </div>
@@ -131,20 +131,19 @@ function TypeScriptCode() {
                 <span className="transition-colors text-blue-800 dark:text-blue-400">
                     toString
                 </span>{' '}
-                ={' '}
+                {'= '}
                 <span className="transition-colors text-orange-800 dark:text-orange-400">
                     {'()'}
                 </span>
-                :{' '}
+                {': '}
                 <span className="transition-colors text-emerald-900 dark:text-green-500">
                     string
                 </span>{' '}
                 <span className="transition-colors text-orange-800 dark:text-orange-400">
-                    {'='}
-                    {'>'}
+                    {'=>'}
                 </span>{' '}
                 <span className="transition-colors text-amber-800 dark:text-amber-400">
-                    'Software Engineer'
+                    &apos;Software Engineer&apos;
                 </span>
                 ;
             </div>
