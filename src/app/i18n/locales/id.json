@@ -5,6 +5,9 @@
         "FOOTNOTE": {
             "1": "Menguasai Front-End.",
             "2": "Menjelajahi Back-End."
+        },
+        "ARIA": {
+            "SECTION_LABEL": "Perkenalan"
         }
     },
     "STR_ABOUT": {
@@ -127,6 +130,7 @@
             "ARIA": {
                 "CURRENT": "Saat ini di {{section}}",
                 "SCROLL_TO": "Gulir ke {{section}}",
+                "SCROLL_TO_TOP": "Gulir ke atas",
                 "OPENS_NEW_TAB": "{{target}} (buka di tab baru)"
             }
         }

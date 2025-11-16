@@ -60,9 +60,7 @@ export default function HeaderContainer() {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="md:pt-1 text-xl lg:text-2xl font-semibold font-mono uppercase cursor-pointer"
-                aria-label={t('STR_MISC.NAVIGATION.ARIA.SCROLL_TO_TOP', {
-                    defaultValue: 'Scroll to top',
-                })}
+                aria-label={t('STR_MISC.NAVIGATION.ARIA.SCROLL_TO_TOP')}
             >
                 {t('STR_HERO.NAME')}
             </a>

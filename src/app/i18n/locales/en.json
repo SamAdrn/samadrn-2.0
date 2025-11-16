@@ -5,6 +5,9 @@
         "FOOTNOTE": {
             "1": "Mastering Front-End.",
             "2": "Exploring Back-End."
+        },
+        "ARIA": {
+            "SECTION_LABEL": "Introduction"
         }
     },
     "STR_ABOUT": {
@@ -127,6 +130,7 @@
             "ARIA": {
                 "CURRENT": "Currently in {{section}}",
                 "SCROLL_TO": "Scroll to {{section}}",
+                "SCROLL_TO_TOP": "Scroll to top",
                 "OPENS_NEW_TAB": "{{target}} (opens in new tab)"
             }
         }

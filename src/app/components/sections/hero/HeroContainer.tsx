@@ -18,6 +18,7 @@ export default function HeroContainer() {
     return (
         <motion.section
             id="hero-section"
+            aria-label={t('STR_HERO.ARIA.SECTION_LABEL')}
             variants={entryContainer}
             initial="hidden"
             animate={splashComplete ? 'visible' : 'hidden'}
@@ -36,9 +37,7 @@ export default function HeroContainer() {
                     'text-6xl font-title font-semibold leading-18 tracking-tight drop-shadow-md cursor-pointer ' +
                     'underline decoration-[0.5rem] underline-offset-8 decoration-amber-600/50 dark:decoration-sky-600/50'
                 }
-                aria-label={t('STR_MISC.NAVIGATION.ARIA.SCROLL_TO_TOP', {
-                    defaultValue: 'Scroll to top',
-                })}
+                aria-label={t('STR_MISC.NAVIGATION.ARIA.SCROLL_TO_TOP')}
             >
                 {t('STR_HERO.NAME')}
             </motion.a>
