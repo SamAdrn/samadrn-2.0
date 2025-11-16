@@ -5,8 +5,8 @@ import {
     projects,
     socials,
 } from '@/app/lib/utils/Constants';
-import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 import { Chip, SectionContainer, Subheader } from '../../shared';
 
 /** The About Section Component.*/
@@ -47,10 +47,10 @@ export default function ProjectContainer() {
                             {/* Content */}
                             <div className="flex flex-col md:flex-row items-start gap-5 z-5 relative">
                                 {/* Project Thumbnail */}
-                                <div className="w-full md:w-5/10 lg:w-2/5 h-45 md:h-45 lg:h-35 xl:h-40 dark:opacity-75 transition-opacity">
-                                    <motion.img
+                                <div className="relative w-full md:w-5/10 lg:w-2/5 h-45 md:h-45 lg:h-35 xl:h-40 dark:opacity-75 transition-opacity">
+                                    <Image
                                         id={`project-item-${folder}-thumbnail`}
-                                        className="object-cover w-full h-full rounded-md shadow-sm"
+                                        className="object-cover rounded-md shadow-sm"
                                         src={`${pathToProjectThumbnail}/${folder}/thumb.png`}
                                         alt={t(
                                             'STR_PROJECT.ITEM.ARIA.THUMB_ALT',
@@ -59,6 +59,9 @@ export default function ProjectContainer() {
                                             },
                                         )}
                                         aria-describedby={`project-item-${folder}-thumbnail-description`}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
+                                        loading="lazy"
                                     />
                                 </div>
 
