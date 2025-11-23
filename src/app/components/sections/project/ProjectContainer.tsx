@@ -34,18 +34,10 @@ export default function ProjectContainer() {
                         <li
                             id={`project-item-${folder}`}
                             key={i}
-                            className="group/item relative transition-all duration-300 group-hover/menu:opacity-50 hover:!opacity-100"
+                            className="group/item relative transition-all duration-300 group-hover/menu:opacity-50 hover:!opacity-100 group-focus-within/menu:opacity-50 focus-within:!opacity-100"
                         >
-                            {/* Hover Effect */}
-                            <div
-                                className={
-                                    'bg-transparent absolute lg:-inset-y-4 lg:-inset-x-6 z-0 transition-colors rounded-lg  ' +
-                                    'group-hover/item:shadow-sm group-hover/item:backdrop-blur-sm group-hover/item:bg-white/40 dark:group-hover/item:bg-gray-700/50'
-                                }
-                            ></div>
-
                             {/* Content */}
-                            <div className="flex flex-col md:flex-row items-start gap-5 z-5 relative">
+                            <div className="peer flex flex-col md:flex-row items-start gap-5 z-5 relative">
                                 {/* Project Thumbnail */}
                                 <div className="relative w-full md:w-5/10 lg:w-2/5 h-45 md:h-45 lg:h-35 xl:h-40 dark:opacity-75 transition-opacity">
                                     <Image
@@ -82,6 +74,7 @@ export default function ProjectContainer() {
                                         className={
                                             'text-surface-light dark:text-surface-dark ' +
                                             'group-hover/item:text-accent-light dark:group-hover/item:text-accent-dark ' +
+                                            'group-focus-within/item:text-accent-light dark:group-focus-within/item:text-accent-dark ' +
                                             'text-lg font-medium flex flex-wrap gap-x-2 items-center'
                                         }
                                     >
@@ -109,7 +102,7 @@ export default function ProjectContainer() {
                                         {link && (
                                             <a
                                                 id={`project-item-${folder}-link`}
-                                                className="group ps-3"
+                                                className="group ms-3 transition duration-300 focus-visible:outline-2 focus-visible:outline-accent-light dark:focus-visible:outline-accent-dark focus-visible:outline-offset-4 rounded-md"
                                                 href={link.href}
                                                 target="_blank"
                                                 rel="noreferrer noopener"
@@ -126,7 +119,8 @@ export default function ProjectContainer() {
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     className={
                                                         'fill-surface-half-light dark:fill-surface-half-dark cursor-pointer transition-all h-5 ' +
-                                                        'group-hover:fill-accent-light/80 group-hover:dark:fill-accent-dark/80 group-hover:scale-105'
+                                                        'group-hover:fill-accent-light/80 group-hover:dark:fill-accent-dark/80 group-hover:scale-105 ' +
+                                                        'group-focus-visible:fill-accent-light/80 group-focus-visible:dark:fill-accent-dark/80 group-focus-visible:scale-105'
                                                     }
                                                     aria-hidden="true"
                                                     fill="currentColor"
@@ -151,6 +145,15 @@ export default function ProjectContainer() {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Hover Effect */}
+                            <div
+                                className={
+                                    'bg-transparent absolute lg:-inset-y-4 lg:-inset-x-6 z-0 transition-colors rounded-lg  ' +
+                                    'group-hover/item:shadow-sm group-hover/item:backdrop-blur-sm group-hover/item:bg-white/40 dark:group-hover/item:bg-gray-700/50 ' +
+                                    'peer-focus-within:shadow-sm peer-focus-within:backdrop-blur-sm peer-focus-within:bg-white/40 dark:peer-focus-within:bg-gray-700/50'
+                                }
+                            ></div>
                         </li>
                     );
                 })}
@@ -166,13 +169,14 @@ export default function ProjectContainer() {
                     aria-label={t('STR_MISC.NAVIGATION.ARIA.OPENS_NEW_TAB', {
                         target: socials.github.label,
                     })}
-                    className="select-none cursor-pointer flex items-center group opacity-70 hover:opacity-100"
+                    className="select-none cursor-pointer flex items-center group opacity-70 hover:opacity-100 focus-visible:opacity-100 transition duration-300 focus-visible:outline-2 focus-visible:outline-accent-light dark:focus-visible:outline-accent-dark focus-visible:outline-offset-4 rounded-md"
                 >
                     {/* Horizontal Line */}
                     <span
                         className={
                             'hidden lg:inline h-[2px] w-20 ms-1 me-4 bg-surface-half-light/70 dark:bg-surface-half-dark ' +
-                            'transition-colors group-hover:bg-accent-light/80 dark:group-hover:bg-accent-dark'
+                            'transition-colors group-hover:bg-accent-light/80 dark:group-hover:bg-accent-dark ' +
+                            'group-focus-visible:bg-accent-light/80 dark:group-focus-visible:bg-accent-dark'
                         }
                     ></span>
 
@@ -180,7 +184,8 @@ export default function ProjectContainer() {
                     <span
                         className={
                             'transition-colors text-surface-half-light dark:text-surface-half-dark ' +
-                            'group-hover:text-accent-light group-hover:dark:text-accent-dark'
+                            'group-hover:text-accent-light group-hover:dark:text-accent-dark ' +
+                            'group-focus-visible:text-accent-light group-focus-visible:dark:text-accent-dark'
                         }
                     >
                         {t('STR_MISC.ACTION.VIEW_GITHUB')}
@@ -197,7 +202,9 @@ export default function ProjectContainer() {
                             'size-4 inline mb-0.5 ms-2 transition-all transform ' +
                             'text-surface-half-light dark:text-surface-half-dark ' +
                             'group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ' +
-                            'group-hover:text-accent-light/80 group-hover:dark:text-accent-dark/80'
+                            'group-hover:text-accent-light/80 group-hover:dark:text-accent-dark/80 ' +
+                            'group-focus-visible:translate-x-0.5 group-focus-visible:-translate-y-0.5 ' +
+                            'group-focus-visible:text-accent-light/80 group-focus-visible:dark:text-accent-dark/80'
                         }
                     >
                         <path

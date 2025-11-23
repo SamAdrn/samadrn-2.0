@@ -59,7 +59,7 @@ export default function HeaderContainer() {
                     e.preventDefault();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="md:pt-1 text-xl lg:text-2xl font-semibold font-mono uppercase cursor-pointer"
+                className="md:pt-1 text-xl lg:text-2xl font-semibold font-mono uppercase cursor-pointer transition duration-300 hover:scale-105 hover:translate-x-2.5 focus-visible:scale-105 focus-visible:translate-x-2.5 focus-visible:outline-2 focus-visible:outline-accent-light dark:focus-visible:outline-accent-dark focus-visible:outline-offset-4 rounded-md"
                 aria-label={t('STR_MISC.NAVIGATION.ARIA.SCROLL_TO_TOP')}
             >
                 {t('STR_HERO.NAME')}

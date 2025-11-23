@@ -29,7 +29,7 @@ export default function SocialBar() {
             <motion.a
                 id={`social-bar-${github.type}-link`}
                 variants={fadeInFromLeft}
-                className="group"
+                className="group transition duration-300 focus-visible:outline-2 focus-visible:outline-accent-light dark:focus-visible:outline-accent-dark focus-visible:outline-offset-4 rounded-md"
                 href={github.link}
                 target="_blank"
                 rel="noreferrer noopener"
@@ -43,7 +43,8 @@ export default function SocialBar() {
                     xmlns="http://www.w3.org/2000/svg"
                     className={
                         'fill-surface-half-light dark:fill-surface-half-dark h-6 cursor-pointer transition-all ' +
-                        'group-hover:fill-accent-light/80 group-hover:dark:fill-accent-dark/80 group-hover:scale-105'
+                        'group-hover:fill-accent-light/80 group-hover:dark:fill-accent-dark/80 group-hover:scale-105 ' +
+                        'group-focus-visible:fill-accent-light/80 group-focus-visible:dark:fill-accent-dark/80 group-focus-visible:scale-105'
                     }
                     aria-hidden="true"
                     fill="currentColor"
@@ -57,7 +58,7 @@ export default function SocialBar() {
             <motion.a
                 id={`social-bar-${linkedin.type}-link`}
                 variants={fadeInFromLeft}
-                className="group"
+                className="group transition duration-300 focus-visible:outline-2 focus-visible:outline-accent-light dark:focus-visible:outline-accent-dark focus-visible:outline-offset-4 rounded-md"
                 href={linkedin.link}
                 target="_blank"
                 rel="noreferrer noopener"
@@ -71,7 +72,8 @@ export default function SocialBar() {
                     xmlns="http://www.w3.org/2000/svg"
                     className={
                         'fill-surface-half-light dark:fill-surface-half-dark h-7 cursor-pointer transition-all ' +
-                        'group-hover:fill-accent-light/80 group-hover:dark:fill-accent-dark/80 group-hover:scale-105'
+                        'group-hover:fill-accent-light/80 group-hover:dark:fill-accent-dark/80 group-hover:scale-105 ' +
+                        'group-focus-visible:fill-accent-light/80 group-focus-visible:dark:fill-accent-dark/80 group-focus-visible:scale-105'
                     }
                     aria-hidden="true"
                     fill="currentColor"
@@ -85,7 +87,7 @@ export default function SocialBar() {
             <motion.a
                 id={`social-bar-${spotify.type}-link`}
                 variants={fadeInFromLeft}
-                className="group"
+                className="group transition duration-300 focus-visible:outline-2 focus-visible:outline-accent-light dark:focus-visible:outline-accent-dark focus-visible:outline-offset-4 rounded-md"
                 href={spotify.link}
                 target="_blank"
                 rel="noreferrer noopener"
@@ -99,7 +101,8 @@ export default function SocialBar() {
                     xmlns="http://www.w3.org/2000/svg"
                     className={
                         'fill-surface-half-light dark:fill-surface-half-dark h-6 cursor-pointer transition-all ' +
-                        'group-hover:fill-accent-light/80 group-hover:dark:fill-accent-dark/80 group-hover:scale-105'
+                        'group-hover:fill-accent-light/80 group-hover:dark:fill-accent-dark/80 group-hover:scale-105 ' +
+                        'group-focus-visible:fill-accent-light/80 group-focus-visible:dark:fill-accent-dark/80 group-focus-visible:scale-105'
                     }
                     aria-hidden="true"
                     fill="currentColor"

@@ -43,21 +43,14 @@ export default function ExperienceContainer() {
                             key={i}
                             className={
                                 'group/item relative transition-all duration-300 ' +
-                                'group-hover/menu:opacity-50 hover:!opacity-100'
+                                'group-hover/menu:opacity-50 hover:!opacity-100 ' +
+                                'group-focus-within/menu:opacity-50 focus-within:!opacity-100'
                             }
                         >
-                            {/* Hover Effect */}
-                            <div
-                                className={
-                                    'bg-transparent absolute lg:-inset-y-4 lg:-inset-x-6 z-0 transition-colors rounded-lg  ' +
-                                    'group-hover/item:shadow-sm group-hover/item:backdrop-blur-sm group-hover/item:bg-white/40 dark:group-hover/item:bg-gray-800/40'
-                                }
-                            ></div>
-
                             {/* Overlay for link */}
                             <a
                                 id={`experience-item-${slug}-link`}
-                                className="bg-transparent absolute inset-0 z-10 cursor-pointer"
+                                className="peer bg-transparent absolute inset-0 z-10 cursor-pointer outline-0"
                                 href={link}
                                 target="_blank"
                                 rel="noreferrer noopener"
@@ -94,6 +87,7 @@ export default function ExperienceContainer() {
                                     className={
                                         'text-surface-light dark:text-surface-dark ' +
                                         'group-hover/item:text-accent-light dark:group-hover/item:text-accent-dark ' +
+                                        'group-focus-within/item:text-accent-light dark:group-focus-within/item:text-accent-dark ' +
                                         'text-lg font-medium flex flex-wrap gap-x-2 items-center'
                                     }
                                 >
@@ -110,7 +104,9 @@ export default function ExperienceContainer() {
                                             className={
                                                 'size-4 inline transition-all transform ' +
                                                 'group-hover/item:translate-x-0.5 group-hover/item:-translate-y-0.5 ' +
-                                                'group-hover/item:text-accent-light/80 group-hover/item:dark:text-accent-dark/80'
+                                                'group-hover/item:text-accent-light/80 group-hover/item:dark:text-accent-dark/80 ' +
+                                                'group-focus-within/item:translate-x-0.5 group-focus-within/item:-translate-y-0.5' +
+                                                'group-focus-within/item:text-accent-light dark:group-focus-within/item:text-accent-dark '
                                             }
                                         >
                                             <path
@@ -136,6 +132,16 @@ export default function ExperienceContainer() {
                                     ))}
                                 </div>
                             </div>
+
+                            {/* Hover Effect */}
+                            <div
+                                className={
+                                    'bg-transparent absolute lg:-inset-y-4 lg:-inset-x-6 z-0 transition-colors rounded-lg  ' +
+                                    'group-hover/item:shadow-sm group-hover/item:backdrop-blur-sm group-hover/item:bg-white/40 dark:group-hover/item:bg-gray-800/40 ' +
+                                    'peer-focus-visible:shadow-sm peer-focus-visible:backdrop-blur-sm peer-focus-visible:bg-white/40 dark:peer-focus-visible:bg-gray-800/40 ' +
+                                    'peer-focus-visible:outline-2 peer-focus-visible:outline-accent-light dark:peer-focus-visible:outline-accent-dark'
+                                }
+                            ></div>
                         </li>
                     );
                 })}

@@ -100,7 +100,8 @@ export default function NavigationBar() {
                             onClick={() => handleNavClick(nav.target)}
                             variants={fadeInFromLeft}
                             className={
-                                'cursor-pointer transition-all flex-1 p-1.5 m-0.5 text-center align-middle rounded-md uppercase text-xs backdrop-blur-sm ' +
+                                'cursor-pointer transition-colors duration-300 flex-1 p-1.5 m-0.5 text-center align-middle rounded-md uppercase text-xs backdrop-blur-sm ' +
+                                'focus-visible:ring-2 focus-visible:ring-accent-light dark:focus-visible:ring-accent-dark outline-0 ' +
                                 (isActive
                                     ? 'font-medium shadow-sm bg-white/40 dark:bg-gray-800/70 opacity-100 ' +
                                       'text-accent-light dark:text-accent-dark'

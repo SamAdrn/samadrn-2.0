@@ -25,10 +25,7 @@ export default function HeroContainer() {
             className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left gap-5"
         >
             {/* Name */}
-            <motion.h1
-                variants={fadeInFromLeft}
-                className="m-0 p-0"
-            >
+            <motion.h1 variants={fadeInFromLeft} className="m-0 p-0">
                 <a
                     id="hero-name"
                     href="#top"
@@ -37,8 +34,10 @@ export default function HeroContainer() {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                     className={
-                        'text-6xl font-title font-semibold leading-18 tracking-tight drop-shadow-md cursor-pointer ' +
-                        'underline decoration-[0.5rem] underline-offset-8 decoration-amber-600/50 dark:decoration-sky-600/50'
+                        'transition text-6xl font-title font-semibold leading-18 tracking-tight drop-shadow-md cursor-pointer rounded-md ' +
+                        'focus-visible:decoration-accent-light dark:focus-visible:decoration-accent-dark hover:decoration-accent-light dark:hover:decoration-accent-dark transition ' +
+                        'underline decoration-[0.5rem] underline-offset-8 decoration-amber-600/50 dark:decoration-sky-600/50 ' +
+                        'focus-visible:outline-2 focus-visible:outline-accent-light dark:focus-visible:outline-accent-dark focus-visible:outline-offset-4'
                     }
                     aria-label={t('STR_MISC.NAVIGATION.ARIA.SCROLL_TO_TOP')}
                 >
@@ -78,13 +77,17 @@ export default function HeroContainer() {
                     aria-label={t('STR_MISC.NAVIGATION.ARIA.OPENS_NEW_TAB', {
                         target: 'Resume',
                     })}
-                    className="select-none cursor-pointer inline-flex items-center group opacity-70 hover:opacity-100"
+                    className={
+                        'select-none cursor-pointer rounded-md inline-flex items-center group opacity-70 hover:opacity-100 focus-visible:opacity-100 ' +
+                        'transition duration-300 focus-visible:outline-2 focus-visible:outline-accent-light dark:focus-visible:outline-accent-dark focus-visible:outline-offset-5 '
+                    }
                 >
                     {/* Button Label */}
                     <span
                         className={
                             'transition-colors text-surface-half-light dark:text-surface-half-dark ' +
-                            'group-hover:text-accent-light group-hover:dark:text-accent-dark'
+                            'group-hover:text-accent-light group-hover:dark:text-accent-dark ' +
+                            'group-focus-visible:text-accent-light group-focus-visible:dark:text-accent-dark'
                         }
                     >
                         {t('STR_MISC.ACTION.VIEW_RESUME')}
@@ -100,6 +103,7 @@ export default function HeroContainer() {
                         className={
                             'size-4 inline mb-0.5 ms-2 transition-all transform ' +
                             'text-surface-half-light dark:text-surface-half-dark ' +
+                            'group-focus-visible:translate-x-0.5 group-focus-visible:-translate-y-0.5 group-focus-visible:text-accent-light/80 group-focus-visible:dark:text-accent-dark/80 ' +
                             'group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ' +
                             'group-hover:text-accent-light/80 group-hover:dark:text-accent-dark/80'
                         }

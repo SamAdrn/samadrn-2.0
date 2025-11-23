@@ -117,7 +117,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" className='scroll-smooth'>
             <body
                 className={
                     `${jetBrainsMono.variable} ${montserrat.variable} ${inter.variable} font-sans antialiased transition-colors ` +

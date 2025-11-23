@@ -51,11 +51,11 @@ export default function ThemeSwitcher() {
             variants={fadeInFromLeft}
             initial="hidden"
             animate={splashComplete ? 'visibleDelay' : 'hidden'}
-            onHoverStart={() => setIsHovered(true)}
-            onHoverEnd={() => setIsHovered(false)}
             className={
-                'relative cursor-pointer transition-colors duration-300 p-2 rounded-full border-1 md:border-2 ' +
-                'border-surface-light dark:border-surface-dark hover:bg-primary-dark hover:dark:bg-primary-light'
+                'group relative cursor-pointer transition-colors duration-300 p-2 rounded-full border-1 md:border-2 ' +
+                'border-surface-light dark:border-surface-dark hover:bg-primary-dark hover:dark:bg-primary-light ' +
+                'focus-visible:bg-primary-dark focus-visible:dark:bg-primary-light ' +
+                'focus-visible:outline-2 focus-visible:outline-moon-blue dark:focus-visible:outline-sun-yellow focus-visible:outline-offset-4 '
             }
             aria-label={darkMode ? toggleLightText : toggleDarkText}
         >
@@ -75,9 +75,7 @@ export default function ThemeSwitcher() {
                             }}
                             className={
                                 'absolute inset-0 w-3.5 h-3.5 md:w-6 md:h-6 transition-colors ' +
-                                (isHovered
-                                    ? 'text-sun-yellow'
-                                    : 'text-surface-dark')
+                                'text-surface-dark group-hover:text-sun-yellow group-focus-visible:text-sun-yellow'
                             }
                             fill="none"
                             viewBox="0 0 24 24"
@@ -103,9 +101,7 @@ export default function ThemeSwitcher() {
                             }}
                             className={
                                 'absolute inset-0 w-3.5 h-3.5 md:w-6 md:h-6 transition-colors ' +
-                                (isHovered
-                                    ? 'text-moon-blue'
-                                    : 'text-surface-light')
+                                'text-surface-light group-hover:text-moon-blue group-focus-visible:text-moon-blue'
                             }
                             fill="none"
                             viewBox="0 0 24 24"

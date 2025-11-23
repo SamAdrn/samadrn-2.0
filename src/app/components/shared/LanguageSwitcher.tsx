@@ -42,10 +42,12 @@ export default function LanguageSwitcher() {
                     key={langType.lang}
                     onClick={() => changeLanguage(langType.lang)}
                     className={
-                        'w-full p-2 cursor-pointer transition-all rounded-md ' +
+                        'w-full p-2 cursor-pointer transition-colors duration-300 rounded-md ' +
+                        'focus-visible:outline-2 focus-visible:outline-accent-light dark:focus-visible:outline-accent-dark focus-visible:outline-offset-4 ' +
                         (language === langType.lang
                             ? 'text-surface-light dark:text-surface-dark'
-                            : 'hover:backdrop-blur-sm text-surface-half-light/80 dark:text-surface-half-dark/80 hover:bg-white/50 dark:hover:bg-gray-700/50')
+                            : 'hover:backdrop-blur-sm text-surface-half-light/80 dark:text-surface-half-dark/80 hover:bg-white/50 dark:hover:bg-gray-700/50 ' +
+                              'focus-visible:backdrop-blur-sm focus-visible:bg-white/50 dark:focus-visible:bg-gray-700/50')
                     }
                     aria-label={t('STR_MISC.LANGUAGE.SET_LANG', {
                         lang: langType.label,
